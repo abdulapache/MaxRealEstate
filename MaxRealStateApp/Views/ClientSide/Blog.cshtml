@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "Blog";
+    Layout = "~/Views/ClientSide/_ClientLayout.cshtml";
+    var url = ViewBag.ApiBaseUrl;
+}
+
+@using MaxModels
+@model List<BlogModel>
+@using Newtonsoft.Json;
+
+<div class="hero page-inner overlay" style="background-image: url('images/hero_bg_1.jpg')">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+                <h1 class="heading" data-aos="fade-up">Blogs</h1>
+
+                <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                    <ol class="breadcrumb text-center justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">
+                            Blogs
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <div class="col-12 col-sm-12 col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-icon">
+                        <span class="input-group-text" id="search-icon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            @foreach(var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="property-item">
+                        <a href="property-single.html" class="img">
+                            <img src="@url/UploadedFiles/@item.PictureOne" alt="Image" class="img-fluid w-100" />
+                        </a>
+
+                        <div class="property-content">
+                            <div class="price mb-2"><span>@item.Title</span></div>
+                            <div>
+                                <span class="d-block mb-2 text-black-50">@item.Description</span>
+
+                                <div class="specs d-flex mb-4 mt-4">
+                                    <span class="d-block d-flex align-items-center me-3">
+                                        <i class="fa fa-calendar"></i>
+                                        <span class="caption">&nbsp;@item.CreatedDate</span>
+                                    </span>
+                                </div>
+                                <div class="text-end">
+                                    <a href="@Url.Action("BlogPage", "ClientSide", new { Id = item.Id })" class="btn btn-primary py-2 px-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <div class="col-md-4">
+                <div class="property-item">
+                    <a href="property-single.html" class="img">
+                        <img src="https://www.silverkeys.ae/wp-content/uploads/2024/11/dubai-corporate.jpg" alt="Image" class="img-fluid w-100" />
+                    </a>
+
+                    <div class="property-content">
+                        <div class="price mb-2"><span>How to Find the Perfect Apartment in Dubai: A Quick Guide</span></div>
+                        <div>
+                            <span class="d-block mb-2 text-black-50">How to Find the Perfect Apartment in Dubai: A Quick Guide Dubai is a city of possibilities, and when it comes to finding an apartment, the choices can be endless. Whether you’re moving to Dubai for work, investing in the property market, or just looking for a new place to call home, choosing the right […]</span>
+
+                            <div class="specs d-flex mb-4 mt-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="caption">&nbsp;December 22, 2024</span>
+                                </span>
+                            </div>
+                            <div class="text-end">
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="property-item">
+                    <a href="property-single.html" class="img">
+                        <img src="https://www.silverkeys.ae/wp-content/uploads/2024/11/corporate.webp" alt="Image" class="img-fluid w-100" />
+                    </a>
+
+                    <div class="property-content">
+                        <div class="price mb-2"><span>Essential Maintenance Tips for Dubai Property Owners</span></div>
+                        <div>
+                            <span class="d-block mb-2 text-black-50">Owning a property in Dubai can be a rewarding investment, but it also comes with its own set of responsibilities, especially when it comes to maintenance. Regular upkeep not only ensures that your property remains in top condition but also helps maintain its value over time. Here are some essential maintenance tips for property owners […]</span>
+
+                            <div class="specs d-flex mb-4 mt-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="caption">&nbsp;December 21, 2024</span>
+                                </span>
+                            </div>
+                            <div class="text-end">
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="property-item">
+                    <a href="property-single.html" class="img">
+                        <img src="https://www.silverkeys.ae/wp-content/uploads/2024/12/Dubai-1-e1726055871751.jpg" alt="Image" class="img-fluid w-100" />
+                    </a>
+                    <div class="property-content">
+                        <div class="price mb-2"><span>Exploring Dubai’s Luxury Real Estate Market</span></div>
+                        <div>
+                            <span class="d-block mb-2 text-black-50">Dubai is synonymous with luxury, and its real estate market is no exception. Over the years, Dubai has become one of the top destinations for luxury real estate, attracting high-net-worth individuals, investors, and celebrities from all over the world. From stunning penthouses with city views to waterfront villas on private islands, the city offers something […]</span>
+
+                            <div class="specs d-flex mb-4 mt-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="caption">&nbsp;December 16, 2024</span>
+                                </span>
+                            </div>
+                            <div class="text-end">
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-3 text-center">
+                <button class="btn btn-primary py-2 px-3">VIEW MORE PROPERTY</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

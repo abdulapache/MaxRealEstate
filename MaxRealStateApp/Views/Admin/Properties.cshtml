@@ -1,0 +1,289 @@
+﻿@{
+    ViewData["Title"] = "Properties";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    var url = ViewBag.ApiBaseUrl;
+}
+
+@using MaxModels
+@model MainModel
+@using Newtonsoft.Json;
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="form-head align-items-center d-flex mb-sm-4 mb-3">
+            <div class="me-auto">
+                <h2 class="text-black font-w600">Properties</h2>
+                <p class="mb-0">Max Admin Dashboard</p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal"
+                        data-bs-target=".propertyModel">
+                    + New Property
+                </button>
+            </div>
+        </div>
+
+        <!-- dataTable -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display min-w850">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Property Name</th>
+                                        <th>Property Type</th>
+                                        <th>Purpose</th>
+                                        <th>Price</th>
+                                        <th>Address</th>
+                                        <th>Owner Name</th>
+                                        <th>Created Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.property)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img class="rounded-circle" width="35"
+                                                     src="@url/UploadedFiles/@item.Pic1" alt="">
+                                            </td>
+                                            <td>@item.PropertyName</td>
+                                            <td>@item.PropertyType</td>
+                                            <td>@item.Purpose</td>
+                                            <td>@item.Price</td>
+                                            <td>@item.Address</td>
+                                            <td>@item.OwnerName</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp me-1" onclick='EditPropertyModel(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(item)))'>
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+
+                                                    <a href="javascript:void(0);"
+                                                       onclick="confirmDelete('@Url.Action("terminatePropert", "Admin", new { Id = item.Id })')"
+                                                       class="btn btn-danger shadow btn-xs sharp">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade propertyModel" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Property</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                </button>
+            </div>
+            <form method="post" id="interviewForm" action="~/Admin/AddProperty">
+                <div class="modal-body">
+                    <input type="hidden" class="form-control" id="propertyId" name="Id">
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="formFile" class="form-label">Property Name</label>
+                            <input class="form-control" type="text" id="PropertyName" name="PropertyName">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Property Type</label>
+                            <select class="form-select" id="propertyType" name="PropertyType">
+                                <option value="0" selected>Select Property Type</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Residential">Residential</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Commercial Type</label>
+                            <select class="form-select" id="CommercialType" name="CommercialType">
+                                <option value="0" selected>Select Commercial Type</option>
+                                <option value="Appartment">Appartment</option>
+                                <option value="Office">Office</option>
+                                <option value="Shop">Shop</option>
+                                <option value="Showroom">Showroom</option>
+                                <option value="Warehouse">Warehouse</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Residential Type</label>
+                            <select class="form-select" id="ResidentType" name="ResidentType">
+                                <option value="0" selected>Select Commercial Type</option>
+                                <option value="Villa">Villa</option>>
+                                <option value="Appartment">Appartment</option>
+                                <option value="Shop">Shop</option>
+                                <option value="Showroom">Showroom</option>
+                                <option value="Warehouse">Warehouse</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Purpose</label>
+                            <select class="form-select" id="Purpose" name="Purpose">
+                                <option value="0" selected>Select Purpose</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Buy">Buy</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Sq Ft</label>
+                            <select class="form-select" id="SqFt" name="SqFt">
+                                <option value="0" selected>Select Sq Ft</option>
+                                <option value="3000+">3000+</option>
+                                <option value="100 - 500">100 - 500</option>
+                                <option value="500 - 1000">500 - 1000</option>
+                                <option value="1000 - 1500">1000 - 1500</option>
+                                <option value="1500 - 2000">1500 - 2000</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Total BedRoom</label>
+                            <input class="form-control" type="text" id="TotalBedroom" name="TotalBedroom">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Total Bath</label>
+                            <input class="form-control" type="text" id="TotalBath" name="TotalBath">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Picture One</label>
+                            <input class="form-control" type="file" id="picOne" onchange="UploadPicOne()">
+                            <input class="form-control" type="text" id="hpicOne" name="Pic1" hidden>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Picture Second</label>
+                            <input class="form-control" type="file" id="picTwo" onchange="UploadPicTwo()">
+                            <input class="form-control" type="text" id="hpicTwo" name="Pic2" hidden>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Picture Third</label>
+                            <input class="form-control" type="file" id="picThree" onchange="UploadPicThree()">
+                            <input class="form-control" type="text" id="hpicThree" name="Pic3" hidden>
+                        </div>
+
+
+
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyName" class="form-label">Price</label>
+                            <input type="text" class="form-control" id="Price" name="Price">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="propertyName" class="form-label">Description</label>
+                            <div class="col-12">
+                                <textarea id="editor" name="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Country</label>
+                            <select class="form-select" id="Country" name="Country">
+                                <option value="0" selected>Select Country</option>
+                                <option value="UAE">UAE</option>
+                                <option value="Pakistant">Pakistant</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">City</label>
+                            <select class="form-select" id="City" name="City">
+                                <option value="0" selected>Select City</option>
+                                <option value="Dubai">Dubai</option>
+                                <option value="Abu Dhabi">Abu Dhabi</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Area</label>
+                            <select class="form-select" id="Area" name="Area">
+                                <option value="0" selected>Select Area</option>
+                                <option value="Dairas">Daira</option>
+                                <option value="AL Khabaisi">AL Khabaisi</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Address</label>
+                            <input class="form-control" type="text" id="Address" name="Address">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Owner Name</label>
+                            <input class="form-control" type="text" id="OwnerName" name="OwnerName">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Owner Address</label>
+                            <input class="form-control" type="text" id="OwnerAddress" name="OwnerAddress">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Owner Phone Number</label>
+                            <input class="form-control" type="text" id="OwnerPhoneNumber" name="OwnerPhoneNumber">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="propertyType" class="form-label">Agents</label>
+                            <select class="form-select" id="AgentId" name="AgentId">
+                                <option value="0" selected>Select Agents</option>
+                                @foreach (var item in Model.Agents)
+                                {
+                                     <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const alertMessage = '@TempData["AlertMessage"]';
+        const alertType = '@TempData["AlertType"]';
+
+        if (alertMessage) {
+            Swal.fire({
+                title: alertType === 'success' ? 'Success!' : 'Error!',
+                text: alertMessage,
+                icon: alertType,
+                confirmButtonText: 'OK'
+            });
+        }
+    });
+    function confirmDelete(url) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to the delete action
+                window.location.href = url;
+            }
+        });
+    }
+</script>
+

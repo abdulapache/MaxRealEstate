@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\UploadedFiles\36753b3a-df7e-413c-b674-787c9c750805loan.jpg" />
+    <Content Remove="wwwroot\UploadedFiles\737d7d9c-a1b5-46ea-ae69-a8b48993d148loan.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\admintheam\icons\avasta\fonts\avasta.svg" />
+    <None Include="wwwroot\admintheam\icons\avasta\fonts\avasta.woff2" />
+    <None Include="wwwroot\admintheam\icons\flaticon\Flaticon.svg" />
+    <None Include="wwwroot\admintheam\icons\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\admintheam\icons\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\admintheam\icons\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\admintheam\icons\fontawesome\webfonts\fa-v4compatibility.woff2" />
+    <None Include="wwwroot\admintheam\icons\line-awesome\fonts\la-brands-400.svg" />
+    <None Include="wwwroot\admintheam\icons\line-awesome\fonts\la-brands-400.woff2" />
+    <None Include="wwwroot\admintheam\icons\line-awesome\fonts\la-regular-400.svg" />
+    <None Include="wwwroot\admintheam\icons\line-awesome\fonts\la-regular-400.woff2" />
+    <None Include="wwwroot\admintheam\icons\line-awesome\fonts\la-solid-900.svg" />
+    <None Include="wwwroot\admintheam\icons\line-awesome\fonts\la-solid-900.woff2" />
+    <None Include="wwwroot\admintheam\icons\material-design-iconic-font\fonts\materialdesignicons-webfont683c.svg" />
+    <None Include="wwwroot\admintheam\icons\material-design-iconic-font\fonts\materialdesignicons-webfont683c.woff2" />
+    <None Include="wwwroot\admintheam\icons\simple-line-icons\fonts\Simple-Line-Icons4c824c82.svg" />
+    <None Include="wwwroot\admintheam\icons\simple-line-icons\fonts\Simple-Line-Icons4c824c82.woff2" />
+    <None Include="wwwroot\admintheam\icons\themify-icons\fonts\themify9f249f24.svg" />
+    <None Include="wwwroot\admintheam\images\dots.svg" />
+    <None Include="wwwroot\admintheam\js\custom.min.js" />
+    <None Include="wwwroot\admintheam\js\dashboard\dashboard-1.js" />
+    <None Include="wwwroot\admintheam\js\dashboard\doctor-details.js" />
+    <None Include="wwwroot\admintheam\js\dashboard\patient-details.js" />
+    <None Include="wwwroot\admintheam\js\deznav-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\bs-daterange-picker-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\chartist-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\chartjs-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\clock-picker-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\datatables.init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\flot-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\fullcalendar-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\jquery-asColorPicker.init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\jquery.validate-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\jqvmap-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\material-date-picker-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\morris-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\nestable-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\nouislider-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\pickadate-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\piety-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\select2-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\sparkline-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\sweetalert.init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\toastr-init.js" />
+    <None Include="wwwroot\admintheam\js\plugins-init\widgets-script-init.js" />
+    <None Include="wwwroot\admintheam\vendor\apexchart\apexchart.js" />
+    <None Include="wwwroot\admintheam\vendor\bootstrap-daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\admintheam\vendor\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <None Include="wwwroot\admintheam\vendor\bootstrap-datetimepicker\js\moment.js" />
+    <None Include="wwwroot\admintheam\vendor\bootstrap-material-datetimepicker\js\bootstrap-material-datetimepicker.js" />
+    <None Include="wwwroot\admintheam\vendor\bootstrap-select\dist\js\bootstrap-select.min.js" />
+    <None Include="wwwroot\admintheam\vendor\chart-js\chart.bundle.min.js" />
+    <None Include="wwwroot\admintheam\vendor\chartist-plugin-tooltips\js\chartist-plugin-tooltip.min.js" />
+    <None Include="wwwroot\admintheam\vendor\chartist\js\chartist.min.js" />
+    <None Include="wwwroot\admintheam\vendor\ckeditor\ckeditor.js" />
+    <None Include="wwwroot\admintheam\vendor\clockpicker\js\bootstrap-clockpicker.min.js" />
+    <None Include="wwwroot\admintheam\vendor\datatables\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\admintheam\vendor\deznav\deznav.min.js" />
+    <None Include="wwwroot\admintheam\vendor\dropzone\dist\dropzone.js" />
+    <None Include="wwwroot\admintheam\vendor\flot-spline\jquery.flot.spline.min.js" />
+    <None Include="wwwroot\admintheam\vendor\flot\jquery.flot.js" />
+    <None Include="wwwroot\admintheam\vendor\flot\jquery.flot.pie.js" />
+    <None Include="wwwroot\admintheam\vendor\flot\jquery.flot.resize.js" />
+    <None Include="wwwroot\admintheam\vendor\fullcalendar\js\main.min.js" />
+    <None Include="wwwroot\admintheam\vendor\global\global.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-asColorPicker\js\jquery-asColorPicker.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-asColor\jquery-asColor.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-asGradient\jquery-asGradient.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-smartwizard\dist\js\jquery.smartWizard.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-sparkline\jquery.sparkline.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-steps\build\jquery.steps.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jquery-validation\jquery.validate.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jqueryui\js\jquery-ui.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jqvmap\js\jquery.vmap.min.js" />
+    <None Include="wwwroot\admintheam\vendor\jqvmap\js\jquery.vmap.usa.js" />
+    <None Include="wwwroot\admintheam\vendor\jqvmap\js\jquery.vmap.world.js" />
+    <None Include="wwwroot\admintheam\vendor\lightgallery\fonts\lgd641.svg" />
+    <None Include="wwwroot\admintheam\vendor\lightgallery\js\lightgallery-all.min.js" />
+    <None Include="wwwroot\admintheam\vendor\moment\moment.min.js" />
+    <None Include="wwwroot\admintheam\vendor\morris\morris.min.js" />
+    <None Include="wwwroot\admintheam\vendor\nestable2\js\jquery.nestable.min.js" />
+    <None Include="wwwroot\admintheam\vendor\nouislider\nouislider.min.js" />
+    <None Include="wwwroot\admintheam\vendor\peity\jquery.peity.min.js" />
+    <None Include="wwwroot\admintheam\vendor\pickadate\picker.date.js" />
+    <None Include="wwwroot\admintheam\vendor\pickadate\picker.js" />
+    <None Include="wwwroot\admintheam\vendor\pickadate\picker.time.js" />
+    <None Include="wwwroot\admintheam\vendor\raphael\raphael.min.js" />
+    <None Include="wwwroot\admintheam\vendor\select2\js\select2.full.min.js" />
+    <None Include="wwwroot\admintheam\vendor\star-rating\jquery.star-rating-svg.js" />
+    <None Include="wwwroot\admintheam\vendor\sweetalert2\dist\sweetalert2.min.js" />
+    <None Include="wwwroot\admintheam\vendor\toastr\js\toastr.min.js" />
+    <None Include="wwwroot\admintheam\vendor\wnumb\wNumb.js" />
+    <None Include="wwwroot\UploadedFiles\36753b3a-df7e-413c-b674-787c9c750805loan.jpg" />
+    <None Include="wwwroot\UploadedFiles\737d7d9c-a1b5-46ea-ae69-a8b48993d148loan.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MaxDataAccess\MaxDataAccess.csproj" />
+    <ProjectReference Include="..\MaxModels\MaxModels.csproj" />
+  </ItemGroup>
+
+</Project>

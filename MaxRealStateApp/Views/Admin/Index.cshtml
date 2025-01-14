@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Admin/_AdminLoginLayout.cshtml";
+}
+
+
+<input type="hidden" value="@ViewBag.ApiBaseUrl" id="ApiBaseUrlId" />
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="text-center mb-3">
+                                    <a href="index.html"><img src="public/assets/images/logo-full.png" alt=""></a>
+                                </div>
+                                <h4 class="text-center mb-4 text-white">Sign in your account</h4>
+                                @* <form> *@
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>Email</strong></label>
+                                        <input type="email" class="form-control" value="hello@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>Password</strong></label>
+                                        <input type="password" class="form-control" value="Password">
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4 mb-2">
+                                        <div class="form-group">
+                                            <div class="form-check custom-checkbox ms-1 text-white">
+                                                <input type="checkbox" class="form-check-input" id="basic_checkbox_1">
+                                                <label class="form-check-label" for="basic_checkbox_1">Remember my preference</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <a class="text-white" href="page_forgot_password.html">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="@Url.Action("Dashboard", "Admin")">
+                                            <button  class="btn bg-white text-primary btn-block">Sign Me In</button>
+                                        </a>
+                                    </div>
+                                @* </form> *@
+                                <div class="new-account mt-3">
+                                    <p class="text-white">Don't have an account? <a class="text-white" href="page_register.html">Sign up</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        localStorage.setItem("ApiBaseUrl", $("#ApiBaseUrlId").val());
+        var BASEURL = window.location.origin;
+        debugger;
+        if (window.location.href.toLowerCase().indexOf("gofinance.com/gosales") > 0) {
+            BASEURL = window.location.origin + "/gosales";
+            localStorage.setItem("BASEURL", BASEURL)
+        }
+        else {
+            BASEURL = "https://localhost:7084";
+            localStorage.setItem("BASEURL", BASEURL)
+        }
+
+    });
+
+
+</script>

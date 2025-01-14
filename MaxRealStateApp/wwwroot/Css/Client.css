@@ -1,0 +1,119 @@
+﻿.property-slider-wrap img {
+    border-radius: 20px;
+}
+
+.property-slider-wrap .property-content {
+    border-radius: 30px;
+}
+
+.property-item img {
+    border-radius: 20px;
+}
+
+.property-item .property-content {
+    border-radius: 30px;
+}
+
+.wText {
+    font-size: 19px;
+    font-weight: 600;
+    font-family: system-ui;
+}
+
+b {
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    margin-top: 10px;
+}
+
+.selected-category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+    .selected-category span {
+        font-weight: bold;
+    }
+
+.close-btn {
+    cursor: pointer;
+    color: red;
+    font-size: 16px;
+}
+
+#category-wrapper {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.toggle-btn {
+    color: gray;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .toggle-btn.active {
+        color: white;
+        background-color: #005aa2;
+        /* Active blue color */
+    }
+
+.carouselcenter {
+    height: 295px;
+}
+
+.divider-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+    .divider-with-icon .line {
+        width: 18%;
+        /* Adjust the width of the line, for example, 30% */
+        height: 1px;
+        background-color: #000;
+        /* Line color */
+    }
+
+    .divider-with-icon i {
+        padding: 0 10px;
+        /* Space around the icon */
+        font-size: 24px;
+        /* Size of the star */
+    }

@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=AR\ARRAHMAN;Database=MaxRealState;User Id= sa; Password=Sql123@; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entites -f

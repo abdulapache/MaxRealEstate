@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "BlogPage";
+    Layout = "~/Views/ClientSide/_ClientLayout.cshtml";
+    var url = ViewBag.ApiBaseUrl;
+}
+@using MaxModels
+@model BlogModel
+@using Newtonsoft.Json;
+
+
+<div class="hero page-inner overlay" style="background-image: url('images/hero_bg_1.jpg')">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+                <h1 class="heading" data-aos="fade-up">@Model.Title</h1>
+
+                <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                    <ol class="breadcrumb text-center justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50">
+                            <a href="blogs.html">Blogs</a>
+                        </li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">
+                            @Model.Title
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="col-md-10 col-sm-12">
+                    <div class="property-item">
+                        <a href="property-single.html" class="img">
+                            <img src="@url/UploadedFiles/@Model.PictureOne"
+                                 alt="Image" class="img-fluid w-100" />
+                        </a>
+
+                        <div class="property-content">
+
+                            <div class="specs d-flex mb-4 mt-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="caption">&nbsp;@Model.CreatedDate</span>
+                                </span>
+                            </div>
+                            <div class="specs d-flex mb-4 mt-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <i class="fa fa-user"></i>
+                                    <span class="caption">&nbsp;@Model.CreatedUser</span>
+                                </span>
+                            </div>
+                            <div class="divider-with-icon mb-2 mt-2">
+                                <span class="line"></span>
+                                <i class="fas fa-star"></i>
+                                <span class="line"></span>
+                            </div>
+
+                            <div class="price mb-2">
+                               
+                            </div>
+                            <div>
+                                @Html.Raw(Model.Description)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-3 text-center">
+                <button class="btn btn-primary py-2 px-3">VIEW MORE PROPERTY</button>
+            </div>
+        </div>
+    </div>
+</div>

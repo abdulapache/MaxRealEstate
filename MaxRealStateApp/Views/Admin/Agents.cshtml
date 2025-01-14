@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Agents";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    var url = ViewBag.ApiBaseUrl;
+}
+
+@using MaxModels
+@model List<AgentModel>
+@using Newtonsoft.Json;
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="form-head align-items-center d-flex mb-sm-4 mb-3">
+            <div class="me-auto">
+                <h2 class="text-black font-w600">Agenst</h2>
+                <p class="mb-0">Max Admin Dashboard</p>
+            </div>
+            <div>
+                <a class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#addOrderModal">+ New Agenst</a>
+            </div>
+        </div>
+
+        <!-- dataTable -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display min-w850">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Address</th>
+                                        <th>Created Date</th>
+                                       
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td><img class="rounded-circle" width="35" src="@url/UploadedFiles/@item.Profile" alt=""></td>
+                                            <td>@item.Name</td>
+                                            <td>@item.Email</td>
+                                            <td>@item.Phone</td>
+                                            <td>@item.Address</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp me-1" onclick='openEditModal(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(item)))'>
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                       onclick="confirmDelete('@Url.Action("terminateAgent", "Admin", new { Id = item.Id })')"
+                                                       class="btn btn-danger shadow btn-xs sharp">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addOrderModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Agent</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" id="interviewForm" action="~/Admin/AddAgent">
+                <div class="modal-body">
+                    <input type="hidden" class="form-control" name="Id" id="agentId">
+
+                    <div class="form-group">
+                        <label class="text-black font-w500">Agent Name</label>
+                        <input type="text" class="form-control" name="Name" id="agentName">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-black font-w500">Email</label>
+                        <input type="email" class="form-control" name="Email" id="agentEmail">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-black font-w500">Profile</label>
+                        <input type="file" class="form-control" id="Profile" name="" onchange="AgentProfile()">
+                        <input type="text" class="form-control" name="Profile" id="proFilePath" hidden>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-black font-w500">Phone</label>
+                        <input type="number" class="form-control" name="Phone" id="agentPhone">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-black font-w500">Address</label>
+                        <input type="text" class="form-control" name="Address" id="agentAddress">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-black font-w500">Department</label>
+                        <input type="text" class="form-control" name="Department" id="agentDepartment">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const alertMessage = '@TempData["AlertMessage"]';
+        const alertType = '@TempData["AlertType"]';
+
+        if (alertMessage) {
+            Swal.fire({
+                title: alertType === 'success' ? 'Success!' : 'Error!',
+                text: alertMessage,
+                icon: alertType,
+                confirmButtonText: 'OK'
+            });
+        }
+    });
+    function confirmDelete(url) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to the delete action
+                window.location.href = url;
+            }
+        });
+    }
+</script>

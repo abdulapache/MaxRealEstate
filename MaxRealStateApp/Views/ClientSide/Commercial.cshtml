@@ -1,0 +1,261 @@
+﻿@{
+    ViewData["Title"] = "Commercial";
+    Layout = "~/Views/ClientSide/_ClientLayout.cshtml";
+}
+
+  <div class="hero page-inner overlay" style="background-image: url('images/hero_bg_1.jpg')">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+              <h1 class="heading" data-aos="fade-up">Commercial</h1>
+    
+              <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                <ol class="breadcrumb text-center justify-content-center">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active text-white-50" aria-current="page">
+                    Commercial
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6 mt-2">
+                <p class="p-3 box-shadow"
+                    style="background-color: white; color:black; border: 1px solid rgb(184, 184, 184);">Commercial</p>
+            </div>
+            <div class="col-md-6 mt-2">
+                <select id="purpose" class="form-select p-3">
+                    <option>Purpose</option>
+                    <option>Sale</option>
+                    <option>Rent</option>
+                </select>
+            </div>
+            <div class="col-md-3 mt-2">
+                <select id="commercial-type" class="form-select p-3">
+                    <option>Residential Type</option>
+                    <option>Office</option>
+                    <option>Shop</option>
+                    <option>Warehouse</option>
+                </select>
+            </div>
+            <div class="col-md-3 mt-2">
+                <select id="city" class="form-select p-3">
+                    <option>City</option>
+                    <option>New York</option>
+                    <option>Los Angeles</option>
+                    <option>Chicago</option>
+                </select>
+            </div>
+            <div class="col-md-3 mt-2">
+                <select id="city" class="form-select p-3">
+                    <option>Area</option>
+                    <option>New York</option>
+                    <option>Los Angeles</option>
+                    <option>Chicago</option>
+                </select>
+            </div>
+            <div class="col-md-3 mt-2">
+                <select id="city" class="form-select p-3">
+                    <option>Sq Ft</option>
+                    <option>New York</option>
+                    <option>Los Angeles</option>
+                    <option>Chicago</option>
+                  </select>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7" data-aos="fade-up">
+                    <h3>Residential</h3>
+                </div>
+                <div class="col-md-1 mt-3">
+                    <h6>Sort by:</h6>
+                </div>
+                <div class="col-md-3 d-block" data-aos="fade-up">
+                    <select id="city" class="form-select p-3">
+                        <option>Date Listed: Newest</option>
+                        <option>Date Listed: Oldest</option>
+                        <option>Featured</option>
+                        <option>Price:Lowest</option>
+                        <option>Price:Highest</option>
+                    </select>
+                </div>
+                <div class="col-md-1 mt-2" data-aos="fade-up">
+                    <div class="col-auto d-flex">
+                        <div id="gridbtn">
+                            <i class="fas fa-th-large toggle-btn active" 
+                                style="cursor: pointer; font-size: 24px; padding: 5px; border-radius: 20%;"
+                                onclick="gridProfile()"></i>
+                        </div>
+                        <!-- Card Button -->
+                        <div id="cardbtn" style="margin-left: 10px;">
+                            <i class="fas fa-bars toggle-btn" 
+                                style="cursor: pointer; font-size: 24px; padding: 5px; border-radius: 20%;"
+                                onclick="cardProfile()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="section" id="gridProfile" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="property-item">
+                    <a href="property-single.html" class="img">
+                        <img src="https://www.barnes-dubai.com/photos/414/min/a08Pg00000HK7m5IAD_R6II8427.jpg" alt="Image" class="img-fluid" />
+                    </a>
+
+                    <div class="property-content">
+                        <div class="price mb-2"><span>AED 1,291,000</span></div>
+                        <div>
+                            <span class="d-block mb-2 text-black-50">5232 Duabi Fake, Ave. 21BC</span>
+                            <span class="city d-block mb-3">Duabi, UAE</span>
+
+                            <div class="specs d-flex mb-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <span class="icon-bed me-2"></span>
+                                    <span class="caption">2 beds</span>
+                                </span>
+                                <span class="d-block d-flex align-items-center">
+                                    <span class="icon-bath me-2"></span>
+                                    <span class="caption">2 baths</span>
+                                </span>
+                            </div>
+
+                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="property-item">
+                    <a href="property-single.html" class="img">
+                        <img src="https://www.trulia.com/pictures/thumbs_5/zillowstatic/fp/9359433dcba48c48b3d8ea72f021c7c8-full.webp" alt="Image" class="img-fluid" />
+                    </a>
+
+                    <div class="property-content">
+                        <div class="price mb-2"><span>AED 1,291,000</span></div>
+                        <div>
+                            <span class="d-block mb-2 text-black-50">5232 Duabi Fake, Ave. 21BC</span>
+                            <span class="city d-block mb-3">Duabi, UAE</span>
+
+                            <div class="specs d-flex mb-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <span class="icon-bed me-2"></span>
+                                    <span class="caption">2 beds</span>
+                                </span>
+                                <span class="d-block d-flex align-items-center">
+                                    <span class="icon-bath me-2"></span>
+                                    <span class="caption">2 baths</span>
+                                </span>
+                            </div>
+
+                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="property-item">
+                    <a href="property-single.html" class="img">
+                        <img src="https://media.onthemarket.com/properties/13718586/1458267493/image-0-1024x1024.webp" alt="Image" class="img-fluid" />
+                    </a>
+
+                    <div class="property-content">
+                        <div class="price mb-2"><span>AED 1,291,000</span></div>
+                        <div>
+                            <span class="d-block mb-2 text-black-50">5232 Dubai Fake, Ave. 21BC</span>
+                            <span class="city d-block mb-3">Dubai, UAE</span>
+
+                            <div class="specs d-flex mb-4">
+                                <span class="d-block d-flex align-items-center me-3">
+                                    <span class="icon-bed me-2"></span>
+                                    <span class="caption">2 beds</span>
+                                </span>
+                                <span class="d-block d-flex align-items-center">
+                                    <span class="icon-bath me-2"></span>
+                                    <span class="caption">2 baths</span>
+                                </span>
+                            </div>
+
+                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- row list -->
+<div class="section" id="cardProfile" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://www.barnes-dubai.com/photos/414/min/a08Pg00000HK7m5IAD_R6II8427.jpg" class="img-fluid rounded-start" alt="Property Image"
+                                 style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text"> <span class="d-block mb-2 text-black-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://www.trulia.com/pictures/thumbs_5/zillowstatic/fp/9359433dcba48c48b3d8ea72f021c7c8-full.webp" class="img-fluid rounded-start" alt="Property Image"
+                                 style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text"> <span class="d-block mb-2 text-black-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://media.onthemarket.com/properties/13718586/1458267493/image-0-1024x1024.webp" class="img-fluid rounded-start" alt="Property Image"
+                                 style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text"> <span class="d-block mb-2 text-black-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
