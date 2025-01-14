@@ -7,3 +7,12 @@ D:\GoFinance\MaxModels\obj\Debug\net6.0\MaxModels.dll
 D:\GoFinance\MaxModels\obj\Debug\net6.0\refint\MaxModels.dll
 D:\GoFinance\MaxModels\obj\Debug\net6.0\MaxModels.pdb
 D:\GoFinance\MaxModels\obj\Debug\net6.0\ref\MaxModels.dll
+D:\GoFinance\MaxRealEstate\MaxModels\bin\Debug\net6.0\MaxModels.deps.json
+D:\GoFinance\MaxRealEstate\MaxModels\bin\Debug\net6.0\MaxModels.dll
+D:\GoFinance\MaxRealEstate\MaxModels\bin\Debug\net6.0\MaxModels.pdb
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.csproj.CoreCompileInputs.cache
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.dll
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\refint\MaxModels.dll
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.pdb
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\ref\MaxModels.dll

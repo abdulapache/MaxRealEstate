@@ -12,3 +12,17 @@ D:\GoFinance\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.pdb
 D:\GoFinance\MaxDataAccess\obj\Debug\net6.0\ref\MaxDataAccess.dll
 D:\GoFinance\MaxDataAccess\bin\Debug\net6.0\MaxDataAccess.runtimeconfig.json
 D:\GoFinance\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.genruntimeconfig.cache
+D:\GoFinance\MaxRealEstate\MaxDataAccess\bin\Debug\net6.0\MaxDataAccess.deps.json
+D:\GoFinance\MaxRealEstate\MaxDataAccess\bin\Debug\net6.0\MaxDataAccess.runtimeconfig.json
+D:\GoFinance\MaxRealEstate\MaxDataAccess\bin\Debug\net6.0\MaxDataAccess.dll
+D:\GoFinance\MaxRealEstate\MaxDataAccess\bin\Debug\net6.0\MaxDataAccess.pdb
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.csproj.AssemblyReference.cache
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.AssemblyInfoInputs.cache
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.AssemblyInfo.cs
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.csproj.CoreCompileInputs.cache
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.dll
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\refint\MaxDataAccess.dll
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.pdb
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.genruntimeconfig.cache
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\ref\MaxDataAccess.dll

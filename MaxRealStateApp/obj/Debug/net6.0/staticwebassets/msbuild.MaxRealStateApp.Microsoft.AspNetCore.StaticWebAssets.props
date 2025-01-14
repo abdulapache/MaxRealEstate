@@ -6928,6 +6928,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\12ee6012-d515-4894-8b13-774393ba4bbb12.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\17ad678e-53b7-4551-ae09-dc7f16cd6fb5dCover.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/17ad678e-53b7-4551-ae09-dc7f16cd6fb5dCover.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\17ad678e-53b7-4551-ae09-dc7f16cd6fb5dCover.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1ca8e8df-0a56-454d-b50e-ba948a8ab943DreamHomes.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/1ca8e8df-0a56-454d-b50e-ba948a8ab943DreamHomes.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1ca8e8df-0a56-454d-b50e-ba948a8ab943DreamHomes.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1d1e7216-a13a-4b3b-837a-194475c1ad06loan.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MaxRealStateApp</SourceId>
@@ -7216,6 +7248,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a24314dc-3354-4c1d-8d7c-f97feee0398412.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a565b7a1-1d85-4656-8351-727e0ead465edCover.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/a565b7a1-1d85-4656-8351-727e0ead465edCover.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a565b7a1-1d85-4656-8351-727e0ead465edCover.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a60c6980-8d0f-42a8-9d55-48ea798c3adb12.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MaxRealStateApp</SourceId>
@@ -7311,6 +7359,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\c5dd340d-6a68-421e-b609-a7986f99a085loan.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\ce2dc6a8-8b8f-4a88-a9d9-d5057a9ebab5DreamHomes.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/ce2dc6a8-8b8f-4a88-a9d9-d5057a9ebab5DreamHomes.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\ce2dc6a8-8b8f-4a88-a9d9-d5057a9ebab5DreamHomes.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\e937e658-2886-4020-9dda-8da5a37f8f52dCover.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/e937e658-2886-4020-9dda-8da5a37f8f52dCover.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\e937e658-2886-4020-9dda-8da5a37f8f52dCover.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\efb3b8e8-1bf2-44c5-8e7a-73b81a57a382leave.png))">
       <SourceType>Package</SourceType>
