@@ -1,0 +1,9 @@
+D:\GoFinance\MaxModels\bin\Debug\net6.0\MaxModels.deps.json
+D:\GoFinance\MaxModels\bin\Debug\net6.0\MaxModels.dll
+D:\GoFinance\MaxModels\bin\Debug\net6.0\MaxModels.pdb
+D:\GoFinance\MaxModels\obj\Debug\net6.0\MaxModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\GoFinance\MaxModels\obj\Debug\net6.0\MaxModels.csproj.CoreCompileInputs.cache
+D:\GoFinance\MaxModels\obj\Debug\net6.0\MaxModels.dll
+D:\GoFinance\MaxModels\obj\Debug\net6.0\refint\MaxModels.dll
+D:\GoFinance\MaxModels\obj\Debug\net6.0\MaxModels.pdb
+D:\GoFinance\MaxModels\obj\Debug\net6.0\ref\MaxModels.dll
