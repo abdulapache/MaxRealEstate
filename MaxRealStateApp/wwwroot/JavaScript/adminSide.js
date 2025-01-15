@@ -136,7 +136,7 @@ ClassicEditor
     .create(document.querySelector('#editor'), {
         toolbar: [
             'heading', '|',
-            'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
+            'bold', 'italic', 'bulletedList', 'numberedList', '|',
             'imageUpload', 'blockQuote', 'undo', 'redo'
         ],
         image: {

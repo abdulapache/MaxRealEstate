@@ -19,8 +19,7 @@
             configuration.EmailPassword = _configuration["AppSettings:EmailPassword"];
             configuration.MaxApiUrl = _configuration["AppSettings:MaxApiUrl"];
             configuration.UploadPathUrl = _configuration["AppSettings:UploadsPath"];
-            configuration.TwilioAccountSid = _configuration["AppSettings:TwilioAccountSid"];
-            configuration.TwilioAuthToken = _configuration["AppSettings:TwilioAuthToken"];
+         
             return configuration;
         }
     }
