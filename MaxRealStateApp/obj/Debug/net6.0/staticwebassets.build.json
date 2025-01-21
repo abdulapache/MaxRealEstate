@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "33WN2Pz3XEuGLapRhg6hwZzn2DgJbZr+EBnzD6GU2BY=",
+  "Hash": "9NR5tfD4OESlE3HwOny9Aya32BSiwKLiIEVJk5GotSc=",
   "Source": "MaxRealStateApp",
   "BasePath": "_content/MaxRealStateApp",
   "Mode": "Default",
@@ -5542,6 +5542,23 @@
       "OriginalItemSpec": "wwwroot\\theam\\images\\index.html"
     },
     {
+      "Identity": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\theam\\images\\logo.png",
+      "SourceId": "MaxRealStateApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\",
+      "BasePath": "_content/MaxRealStateApp",
+      "RelativePath": "theam/images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\theam\\images\\logo.png"
+    },
+    {
       "Identity": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\theam\\images\\person_1-min.jpg",
       "SourceId": "MaxRealStateApp",
       "SourceType": "Discovered",
@@ -7852,6 +7869,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\UploadedFiles\\ce2dc6a8-8b8f-4a88-a9d9-d5057a9ebab5DreamHomes.png"
+    },
+    {
+      "Identity": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\UploadedFiles\\dfa1ab35-7a2d-4e71-a17b-75fb4bfb8b033.png",
+      "SourceId": "MaxRealStateApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\",
+      "BasePath": "_content/MaxRealStateApp",
+      "RelativePath": "UploadedFiles/dfa1ab35-7a2d-4e71-a17b-75fb4bfb8b033.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\dfa1ab35-7a2d-4e71-a17b-75fb4bfb8b033.png"
     },
     {
       "Identity": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\UploadedFiles\\e937e658-2886-4020-9dda-8da5a37f8f52dCover.webp",

@@ -145,6 +145,10 @@
       "PackagePath": "staticwebassets\\UploadedFiles\\ce2dc6a8-8b8f-4a88-a9d9-d5057a9ebab5DreamHomes.png"
     },
     {
+      "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\UploadedFiles\\dfa1ab35-7a2d-4e71-a17b-75fb4bfb8b033.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\dfa1ab35-7a2d-4e71-a17b-75fb4bfb8b033.png"
+    },
+    {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\UploadedFiles\\e937e658-2886-4020-9dda-8da5a37f8f52dCover.webp",
       "PackagePath": "staticwebassets\\UploadedFiles\\e937e658-2886-4020-9dda-8da5a37f8f52dCover.webp"
     },
@@ -1455,6 +1459,10 @@
     {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\theam\\images\\index.html",
       "PackagePath": "staticwebassets\\theam\\images\\index.html"
+    },
+    {
+      "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\theam\\images\\logo.png",
+      "PackagePath": "staticwebassets\\theam\\images\\logo.png"
     },
     {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\theam\\images\\person_1-min.jpg",

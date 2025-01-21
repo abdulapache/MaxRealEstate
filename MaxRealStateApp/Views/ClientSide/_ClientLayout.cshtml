@@ -41,41 +41,54 @@
         <div class="site-mobile-menu-body"></div>
     </div>
 
-    <nav class="site-nav" id="siteNav">
-        <div class="container" id="headerContainer">
+
+
+    <nav class="site-nav">
+        <div class="container">
             <div class="menu-bg-wrap">
-                <div class="site-navigation">
-                    <a href="index.html" class="logo m-0 float-start">Property</a>
+                <div class="site-navigation row align-items-center">
+                    <!-- Logo Column -->
+                    <div class="col-6 col-lg-3">
+                        <a href="index.html" class="logo m-0">
+                            <img src="~/theam/images/logo.png" class="logoimg" />
+                        </a>
+                    </div>
 
-                    <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li class="has-children">
-                            <a href="#">Properties in Dubai</a>
-                            <ul class="dropdown">
-                                <li><a href="@Url.Action("Residential", "ClientSide")">Residential</a></li>
-                                <li><a href="@Url.Action("Commercial", "ClientSide")" ">Commercial</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">Sale & Rent</a>
-                            <ul class="dropdown">
-                                <li><a href="@Url.Action("AppSaleRent", "ClientSide")">Appartment for Sale and Rent</a></li>
-                                <li><a href="@Url.Action("VillaSaleRent", "ClientSide")">Villas for Sale and Rent</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="@Url.Action("PropertyM", "ClientSide")">Property Management Process</a></li>
-                        <li><a href="@Url.Action("Blog", "ClientSide")">Blog</a></li>
-                        <li><a href="@Url.Action("ContactUs", "ClientSide")">Contact Us</a></li>
-                        <li><a href="@Url.Action("ListProperty", "ClientSide")">List Your Property</a></li>
-                    </ul>
+                    <!-- Menu Column -->
+                    <div class="col-6 col-lg-9 text-end">
+                        <!-- Menu for large screens -->
+                        <ul class="js-clone-nav d-none d-lg-flex list-unstyled m-0 site-menu">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="has-children">
+                                <a href="#">Properties in Dubai</a>
+                                <ul class="dropdown">
+                                    <li><a href="@Url.Action("Residential", "ClientSide")">Residential</a></li>
+                                    <li><a href="@Url.Action("Commercial", "ClientSide")">Commercial</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Sale & Rent</a>
+                                <ul class="dropdown">
+                                    <li><a href="@Url.Action("AppSaleRent", "ClientSide")">Appartment for Sale and Rent</a></li>
+                                    <li><a href="@Url.Action("VillaSaleRent", "ClientSide")">Villas for Sale and Rent</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="@Url.Action("PropertyM", "ClientSide")">Property Management Process</a></li>
+                            <li><a href="@Url.Action("Blog", "ClientSide")">Blog</a></li>
+                            <li><a href="@Url.Action("ContactUs", "ClientSide")">Contact Us</a></li>
+                            <li><a href="@Url.Action("ListProperty", "ClientSide")">List Your Property</a></li>
+                        </ul>
 
-                    <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none">
-                        <span></span>
-                    </a>
+                        <!-- Burger Menu (for mobile) -->
+                        <a href="#" class="burger light site-menu-toggle js-menu-toggle d-inline-block d-lg-none ">
+                            <span></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
+
 
 
    @RenderBody()
