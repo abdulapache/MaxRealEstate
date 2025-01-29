@@ -13,19 +13,17 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-9 text-center mt-5">
                 <h1 class="heading" data-aos="fade-up">Residential</h1>
-
                 <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
                     <ol class="breadcrumb text-center justify-content-center">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active text-white-50" aria-current="page">
-                            Residential
-                        </li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">Residential</li>
                     </ol>
                 </nav>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-6 mt-2">
@@ -41,34 +39,19 @@
         </div>
         <div class="col-md-3 mt-2">
             <select id="commercial-type" class="form-select p-3">
-                <option>Residential Type</option>
-                <option>Office</option>
-                <option>Shop</option>
-                <option>Warehouse</option>
+                <option value="0" selected>Commercial Type</option>
+                <option value="Villa">Villa</option>
+                <option value="Appartment">Appartment</option>
+                <option value="Shop">Shop</option>
+                <option value="Showroom">Showroom</option>
+                <option value="Warehouse">Warehouse</option>
             </select>
         </div>
         <div class="col-md-3 mt-2">
             <select id="city" class="form-select p-3">
-                <option>City</option>
-                <option>New York</option>
-                <option>Los Angeles</option>
-                <option>Chicago</option>
-            </select>
-        </div>
-        <div class="col-md-3 mt-2">
-            <select id="city" class="form-select p-3">
-                <option>Area</option>
-                <option>New York</option>
-                <option>Los Angeles</option>
-                <option>Chicago</option>
-            </select>
-        </div>
-        <div class="col-md-3 mt-2">
-            <select id="city" class="form-select p-3">
-                <option>Bedroom</option>
-                <option>New York</option>
-                <option>Los Angeles</option>
-                <option>Chicago</option>
+                <option value="0" selected>City</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
             </select>
         </div>
     </div>
@@ -99,7 +82,6 @@
                            style="cursor: pointer; font-size: 24px; padding: 5px; border-radius: 20%;"
                            onclick="gridProfile()"></i>
                     </div>
-                    <!-- Card Button -->
                     <div id="cardbtn" style="margin-left: 10px;">
                         <i class="fas fa-bars toggle-btn"
                            style="cursor: pointer; font-size: 24px; padding: 5px; border-radius: 20%;"
@@ -111,24 +93,24 @@
     </div>
 </div>
 
-<!-- car list     -->
-<div class="section" id="gridProfile" style="display: none;">
+<div class="section">
     <div class="container">
         <div class="row">
             @foreach (var item in Model.property)
             {
                 <div class="col-md-3">
-                    <div class="property-item">
+                    <div class="property-item"
+                         data-purpose="@item.Purpose"
+                         data-commercial-type="@item.CommercialType"
+                         data-city="@item.City">
                         <a href="property-single.html" class="img">
                             <img src="@url/UploadedFiles/@item.Pic1" alt="Image" class="img-fluid" />
                         </a>
-
                         <div class="property-content">
                             <div class="price mb-2"><span>@item.Price</span></div>
                             <div>
                                 <span class="d-block mb-2 text-black-50">@item.PropertyName</span>
                                 <span class="city d-block mb-3">@item.City, @item.Country</span>
-
                                 <div class="specs d-flex mb-4">
                                     <span class="d-block d-flex align-items-center me-3">
                                         <span class="icon-bed me-2"></span>
@@ -139,195 +121,56 @@
                                         <span class="caption">@item.TotalBath</span>
                                     </span>
                                 </div>
-
                                 <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
                             </div>
                         </div>
                     </div>
                 </div>
             }
-
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="property-item">
-                    <a href="property-single.html" class="img">
-                        <img src="https://www.barnes-dubai.com/photos/414/min/a08Pg00000HK7m5IAD_R6II8427.jpg" alt="Image" class="img-fluid" />
-                    </a>
-
-                    <div class="property-content">
-                        <div class="price mb-2"><span>AED 1,291,000</span></div>
-                        <div>
-                            <span class="d-block mb-2 text-black-50">5232 Duabi Fake, Ave. 21BC</span>
-                            <span class="city d-block mb-3">Duabi, UAE</span>
-
-                            <div class="specs d-flex mb-4">
-                                <span class="d-block d-flex align-items-center me-3">
-                                    <span class="icon-bed me-2"></span>
-                                    <span class="caption">2 beds</span>
-                                </span>
-                                <span class="d-block d-flex align-items-center">
-                                    <span class="icon-bath me-2"></span>
-                                    <span class="caption">2 baths</span>
-                                </span>
-                            </div>
-
-                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="property-item">
-                    <a href="property-single.html" class="img">
-                        <img src="https://www.trulia.com/pictures/thumbs_5/zillowstatic/fp/9359433dcba48c48b3d8ea72f021c7c8-full.webp" alt="Image" class="img-fluid" />
-                    </a>
-
-                    <div class="property-content">
-                        <div class="price mb-2"><span>AED 1,291,000</span></div>
-                        <div>
-                            <span class="d-block mb-2 text-black-50">5232 Duabi Fake, Ave. 21BC</span>
-                            <span class="city d-block mb-3">Duabi, UAE</span>
-
-                            <div class="specs d-flex mb-4">
-                                <span class="d-block d-flex align-items-center me-3">
-                                    <span class="icon-bed me-2"></span>
-                                    <span class="caption">2 beds</span>
-                                </span>
-                                <span class="d-block d-flex align-items-center">
-                                    <span class="icon-bath me-2"></span>
-                                    <span class="caption">2 baths</span>
-                                </span>
-                            </div>
-
-                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="property-item">
-                    <a href="property-single.html" class="img">
-                        <img src="https://media.onthemarket.com/properties/13718586/1458267493/image-0-1024x1024.webp" alt="Image" class="img-fluid" />
-                    </a>
-
-                    <div class="property-content">
-                        <div class="price mb-2"><span>AED 1,291,000</span></div>
-                        <div>
-                            <span class="d-block mb-2 text-black-50">5232 Dubai Fake, Ave. 21BC</span>
-                            <span class="city d-block mb-3">Dubai, UAE</span>
-
-                            <div class="specs d-flex mb-4">
-                                <span class="d-block d-flex align-items-center me-3">
-                                    <span class="icon-bed me-2"></span>
-                                    <span class="caption">2 beds</span>
-                                </span>
-                                <span class="d-block d-flex align-items-center">
-                                    <span class="icon-bath me-2"></span>
-                                    <span class="caption">2 baths</span>
-                                </span>
-                            </div>
-
-                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
-<!-- row list -->
-<div class="section" id="cardProfile" style="display: none;">
-    <div class="container">
-        <div class="row">
-            @foreach (var item in Model.property)
-            {
-                <div class="col-md-6">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="@url/UploadedFiles/@item.Pic1" class="img-fluid rounded-start" alt="Property Image"
-                                     style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">@item.PropertyName</h5>
-                                    <div class="price mb-2"><span>@item.Price</span></div>
-                                    <span class="city d-block mb-3">@item.City, @item.Country</span>
-                                    <span class="d-block d-flex align-items-center me-3">
-                                        <span class="icon-bed me-2"></span>
-                                        <span class="caption">@item.TotalBedroom</span>
-                                    </span>
-                                    <span class="d-block d-flex align-items-center">
-                                        <span class="icon-bath me-2"></span>
-                                        <span class="caption">@item.TotalBath</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get filter dropdowns
+        const purposeDropdown = document.getElementById("purpose");
+        const commercialTypeDropdown = document.getElementById("commercial-type");
+        const cityDropdown = document.getElementById("city");
 
-            }
+        // Get all property items
+        const propertyItems = document.querySelectorAll(".property-item");
 
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://www.barnes-dubai.com/photos/414/min/a08Pg00000HK7m5IAD_R6II8427.jpg" class="img-fluid rounded-start" alt="Property Image"
-                                 style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text"> <span class="d-block mb-2 text-black-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // Add event listeners for filter dropdowns
+        purposeDropdown.addEventListener("change", filterProperties);
+        commercialTypeDropdown.addEventListener("change", filterProperties);
+        cityDropdown.addEventListener("change", filterProperties);
 
-            </div>
-            <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://www.trulia.com/pictures/thumbs_5/zillowstatic/fp/9359433dcba48c48b3d8ea72f021c7c8-full.webp" class="img-fluid rounded-start" alt="Property Image"
-                                 style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text"> <span class="d-block mb-2 text-black-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        function filterProperties() {
+            // Get selected filter values
+            const purpose = purposeDropdown.value.toLowerCase();
+            const commercialType = commercialTypeDropdown.value.toLowerCase();
+            const city = cityDropdown.value.toLowerCase();
 
-            </div>
-            <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://media.onthemarket.com/properties/13718586/1458267493/image-0-1024x1024.webp" class="img-fluid rounded-start" alt="Property Image"
-                                 style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text"> <span class="d-block mb-2 text-black-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span></p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            // Iterate over all property items
+            propertyItems.forEach(item => {
+                const itemPurpose = item.dataset.purpose.toLowerCase();
+                const itemCommercialType = item.dataset.commercialType.toLowerCase();
+                const itemCity = item.dataset.city.toLowerCase();
 
-        </div>
-    </div>
-</div>
+                const matchesPurpose = purpose === "purpose" || itemPurpose === purpose;
+                const matchesCommercialType = commercialType === "0" || itemCommercialType === commercialType;
+                const matchesCity = city === "0" || itemCity === city;
+
+                if (matchesPurpose && matchesCommercialType && matchesCity) {
+                    item.closest(".col-md-3").style.display = "block";
+                } else {
+                    item.closest(".col-md-3").style.display = "none";
+                }
+            });
+        }
+
+        // Initialize filtering on page load
+        filterProperties();
+    });
+</script>

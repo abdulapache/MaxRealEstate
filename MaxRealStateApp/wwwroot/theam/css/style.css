@@ -97,7 +97,9 @@ body {
         width: 70%;
     }
 }
-
+img{
+    border-radius:10px!important; 
+}
 hr {
   margin: 1rem 0;
   color: inherit;
