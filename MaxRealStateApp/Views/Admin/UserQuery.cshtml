@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+@using MaxModels
+@model List<userQueryModel>
+@using Newtonsoft.Json;
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="form-head align-items-center d-flex mb-sm-4 mb-3">
+            <div class="me-auto">
+                <h2 class="text-black font-w600">ContactUs List</h2>
+                <p class="mb-0">Max Admin Dashboard</p>
+            </div>
+        </div>
+
+        <!-- dataTable -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display min-w850">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Mobile</th>
+                                        <th>Purpose</th>
+                                        <th>Property</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+
+                                            <td>@item.Name</td>
+                                            <td>@item.Email</td>
+                                            <td>@item.Mobile</td>
+                                            <td>@item.Purpose</td>
+                                            <td>@item.Property</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp me-1" onclick='EditBlogModel(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(item)))'>
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+
+                                                    <a href="javascript:void(0);"
+                                                       onclick="confirmDelete('@Url.Action("terminateBlog", "Admin", new { Id = item.Id })')"
+                                                       class="btn btn-danger shadow btn-xs sharp">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

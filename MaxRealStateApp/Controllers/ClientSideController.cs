@@ -1,7 +1,9 @@
 ﻿using MaxDataAccess;
+using MaxDataAccess.Entites;
 using MaxModels;
 using MaxRealStateApp.Configuration;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography.Xml;
 using System.Text.RegularExpressions;
 using System.Text.RegularExpressions;
 
@@ -165,8 +167,52 @@ namespace MaxRealStateApp.Controllers
         }
 
 
+        public IActionResult ContactUsAdd(ContactModel model)
+        {
+            try
+            {
+                ContactU d1 = new ContactU();
+                d1.Name = model.Name;
+                d1.Email = model.Email;
+                d1.Subject = model.Subject;
+                d1.Message = model.Message;
+                d1.CreatedDate = DateTime.Now;
+                d1.IsActive = true;
+                unitOfWork.contactUs.Add(d1);
+                unitOfWork.Save();
+                TempData["AlertMessage"] = "Thank You!";
+                TempData["AlertType"] = "success";
+            }
+            catch(Exception ex)
+            {
 
+            }
+            return RedirectToAction("ContactUs");
+        }
 
+        public IActionResult UserQueryAdd(userQueryModel model)
+        {
+            try
+            {
+                UserQuery d1 = new UserQuery();
+                d1.Name = model.Name;
+                d1.Email = model.Email;
+                d1.Mobile = model.Mobile;
+                d1.Purpose = model.Purpose;
+                d1.Property = model.Property;
+                d1.CreatedDate = DateTime.Now;
+                d1.IsActive = true;
+                unitOfWork.userQuery.Add(d1);
+                unitOfWork.Save();
+                TempData["AlertMessage"] = "Thank You!";
+                TempData["AlertType"] = "success";
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return RedirectToAction("ListProperty");
+        }
 
         public static string ExtractDescription(string html, int maxLength)
         {

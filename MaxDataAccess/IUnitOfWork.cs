@@ -13,6 +13,8 @@ namespace MaxDataAccess
 		IRepository<Agent> agents { get; }
 		IRepository<Property> properties { get; }
 		IRepository<Blog> blogs { get; }
+		IRepository<ContactU> contactUs { get; }
+		IRepository<UserQuery> userQuery { get; }
 		void Save();
 	}
 }

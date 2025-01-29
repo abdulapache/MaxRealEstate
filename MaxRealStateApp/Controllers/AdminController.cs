@@ -67,7 +67,7 @@ namespace MaxRealStateApp.Controllers
             {
                 ViewBag.ApiBaseUrl = appSettings.GetConfiguration().maxOwnlink;
                 var agentData = unitOfWork.agents.getList(a => a.IsActive == true).ToList();
-                if(agentData is not null)
+                if (agentData is not null)
                 {
                     foreach (var item in agentData)
                     {
@@ -240,7 +240,7 @@ namespace MaxRealStateApp.Controllers
                         d2.Description = model.Description;
                         d2.TotalBedroom = model.TotalBedroom;
                         d2.TotalBath = model.TotalBath;
-                        if(model.Pic1 is not null)
+                        if (model.Pic1 is not null)
                         {
                             d2.Pic1 = model.Pic1;
                         }
@@ -396,6 +396,65 @@ namespace MaxRealStateApp.Controllers
 
             }
             return RedirectToAction("Blogs");
+        }
+
+
+        public IActionResult ContactUsList()
+        {
+            List<ContactModel> d1 = new List<ContactModel>();
+            try
+            {
+                var d2 = unitOfWork.contactUs.getList(c => c.IsActive == true);
+                if(d2 is not null)
+                {
+                    foreach(var item in d2)
+                    {
+                        ContactModel d3 = new ContactModel();
+                        d3.Id = item.Id;
+                        d3.Name = item.Name;
+                        d3.Email = item.Email;
+                        d3.Subject = item.Subject;
+                        d3.Message = item.Message;
+                        d3.CreatedDate = item.CreatedDate;
+                        d1.Add(d3);
+                    }
+                    
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View(d1);
+        }
+
+        public IActionResult UserQuery()
+        {
+            List<userQueryModel> d1 = new List<userQueryModel>();
+            try
+            {
+                var d2 = unitOfWork.userQuery.getList(u => u.IsActive == true).ToList();
+                if(d2 is not null)
+                {
+                    foreach(var item in d2)
+                    {
+                        userQueryModel d3 = new userQueryModel();
+                        d3.Id = item.Id;
+                        d3.Name = item.Name;
+                        d3.Email = item.Email;
+                        d3.Mobile = item.Mobile;
+                        d3.Purpose = item.Purpose;
+                        d3.Property = item.Property;
+                        d3.CreatedDate = item.CreatedDate;
+                        d1.Add(d3);
+                    }
+                }
+            }catch(Exception ex)
+            {
+
+            }
+            return View(d1);
         }
     }
 }

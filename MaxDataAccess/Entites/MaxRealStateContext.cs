@@ -18,7 +18,9 @@ namespace MaxDataAccess.Entites
 
         public virtual DbSet<Agent> Agents { get; set; } = null!;
         public virtual DbSet<Blog> Blogs { get; set; } = null!;
+        public virtual DbSet<ContactU> ContactUs { get; set; } = null!;
         public virtual DbSet<Property> Properties { get; set; } = null!;
+        public virtual DbSet<UserQuery> UserQueries { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -61,6 +63,21 @@ namespace MaxDataAccess.Entites
                 entity.Property(e => e.Title).HasMaxLength(255);
             });
 
+            modelBuilder.Entity<ContactU>(entity =>
+            {
+                entity.Property(e => e.CreatedDate).HasColumnType("date");
+
+                entity.Property(e => e.Email).HasMaxLength(150);
+
+                entity.Property(e => e.IsActive).HasDefaultValueSql("((0))");
+
+                entity.Property(e => e.Message).HasMaxLength(500);
+
+                entity.Property(e => e.Name).HasMaxLength(150);
+
+                entity.Property(e => e.Subject).HasMaxLength(500);
+            });
+
             modelBuilder.Entity<Property>(entity =>
             {
                 entity.Property(e => e.Address).HasMaxLength(500);
@@ -100,6 +117,25 @@ namespace MaxDataAccess.Entites
                 entity.Property(e => e.SqFt).HasMaxLength(50);
 
                 entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
+            });
+
+            modelBuilder.Entity<UserQuery>(entity =>
+            {
+                entity.ToTable("UserQuery");
+
+                entity.Property(e => e.CreatedDate).HasColumnType("date");
+
+                entity.Property(e => e.Email).HasMaxLength(150);
+
+                entity.Property(e => e.IsActive).HasDefaultValueSql("((0))");
+
+                entity.Property(e => e.Mobile).HasMaxLength(150);
+
+                entity.Property(e => e.Name).HasMaxLength(150);
+
+                entity.Property(e => e.Property).HasMaxLength(50);
+
+                entity.Property(e => e.Purpose).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

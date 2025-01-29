@@ -18,11 +18,15 @@ namespace MaxDataAccess
 			agents = new Repository<Agent>(db);
 			properties = new Repository<Property>(db);
 			blogs = new Repository<Blog>(db);
+			contactUs = new Repository<ContactU>(db);
+            userQuery = new Repository<UserQuery>(db);
 			
 		}
 		public IRepository<Agent> agents { get; private set; }
 		public IRepository<Property> properties { get; private set; }
 		public IRepository<Blog> blogs { get; private set; }
+		public IRepository<ContactU> contactUs { get; private set; }
+		public IRepository<UserQuery> userQuery { get; private set; }
 
 		public void Save()
 		{

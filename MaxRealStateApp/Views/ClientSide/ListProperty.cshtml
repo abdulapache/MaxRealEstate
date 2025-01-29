@@ -59,13 +59,13 @@
             </div>
             <div class="col-md-6 mt-3">
                 <h5 data-aos="fade-up">List Your Property With Max</h5>
-                <form>
-                    <input class="form-control p-3 mt-4" placeholder="Name" />
-                    <input class="form-control p-3 mt-4" placeholder="Email Id" />
-                    <input class="form-control p-3 mt-4" placeholder="Mobile No" />
+                <form action="~/ClientSide/UserQueryAdd">
+                    <input class="form-control p-3 mt-4" placeholder="Name" name="Name" />
+                    <input class="form-control p-3 mt-4" placeholder="Email Id" name="Email" />
+                    <input class="form-control p-3 mt-4" placeholder="Mobile No" name="Mobile" />
                     <div class="mt-4">
                         <label>Select </label>
-                        <select id="purpose" class="form-select p-3">
+                        <select id="purpose" class="form-select p-3" name="Purpose">
                             <option>I Want to Sell</option>
                             <option>I Want to Rent( Sort Term )</option>
                             <option>I Want to Rent( Long Term )</option>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="mt-4">
                         <label>Select </label>
-                        <select id="purpose" class="form-select p-3">
+                        <select id="purpose" class="form-select p-3" name="Property">
                             <option>Villa</option>
                             <option>Town House</option>
                             <option>Office</option>
@@ -83,7 +83,7 @@
                         </select>
                     </div>
                     <div class="text-center mt-3">
-                        <button class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
@@ -513,3 +513,35 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const alertMessage = '@TempData["AlertMessage"]';
+        const alertType = '@TempData["AlertType"]';
+        if (alertMessage) {
+            Swal.fire({
+                title: alertType === 'success' ? 'Success!' : 'Error!',
+                text: alertMessage,
+                icon: alertType,
+                confirmButtonText: 'OK'
+            });
+        }
+    });
+    function confirmDelete(url) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to the delete action
+                window.location.href = url;
+            }
+        });
+    }
+</script>
