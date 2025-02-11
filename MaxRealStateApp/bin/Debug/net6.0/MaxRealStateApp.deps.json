@@ -561,12 +561,18 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "runtime": {
-          "MaxDataAccess.dll": {}
+          "MaxDataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "MaxModels/1.0.0": {
         "runtime": {
-          "MaxModels.dll": {}
+          "MaxModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "0.0.0.0"
+          }
         }
       }
     }

@@ -81,22 +81,161 @@ namespace MaxRealStateApp.Controllers
         public IActionResult Commercial()
         {
             MainModel d1 = new MainModel();
+            ViewBag.ApiBaseUrl = appSettings.GetConfiguration().maxOwnlink;
             try
             {
+                var d2 = unitOfWork.properties.getList(p => p.IsActive == true && p.PropertyType == "Commercial");
+                if (d2 is not null)
+                {
+                    foreach (var item in d2)
+                    {
 
-            }catch(Exception ex)
+                        PropertyModel d3 = new PropertyModel();
+                        if (item.AgentId > 0)
+                        {
+                            var agent = unitOfWork.agents.FindFirstOrDefault(a => a.IsActive == true && a.Id == item.AgentId);
+                            if (agent is not null)
+                            {
+                                d3.AgentName = agent.Name;
+                            }
+                        }
+                        d3.Id = item.Id;
+                        d3.PropertyName = item.PropertyName;
+                        d3.Purpose = item.PropertyType;
+                        d3.SqFt = item.SqFt;
+                        d3.Country = item.Country;
+                        d3.City = item.City;
+                        d3.Price = item.Price;
+                        d3.Address = item.Address;
+
+                        d3.Pic1 = item.Pic1;
+                        d3.Pic2 = item.Pic2;
+                        d3.Pic3 = item.Pic3;
+                        d3.Description = item.Description;
+                        d3.TotalBedroom = item.TotalBedroom;
+                        d3.TotalBath = item.TotalBath;
+                        d3.Purpose = item.Purpose;
+                        d3.OwnerName = item.OwnerName;
+                        d3.OwnerPhoneNumber = item.OwnerPhoneNumber;
+                        d3.OwnerAddress = item.OwnerAddress;
+                        d3.OwnerPhoneNumber = item.OwnerPhoneNumber;
+                        d3.AgentId = d3.AgentId;
+                        d1.property.Add(d3);
+                    }
+
+                }
+            }
+            catch (Exception ex)
             {
 
             }
-            return View();
+            return View(d1);
         }
         public IActionResult AppSaleRent()
         {
-            return View();
+            MainModel d1 = new MainModel();
+            ViewBag.ApiBaseUrl = appSettings.GetConfiguration().maxOwnlink;
+            try
+            {
+                var d2 = unitOfWork.properties.getList(p => p.IsActive == true && (p.ResidentType == "Appartment" || p.CommercialType == "Appartment"));
+                if (d2 is not null)
+                {
+                    foreach (var item in d2)
+                    {
+
+                        PropertyModel d3 = new PropertyModel();
+                        if (item.AgentId > 0)
+                        {
+                            var agent = unitOfWork.agents.FindFirstOrDefault(a => a.IsActive == true && a.Id == item.AgentId);
+                            if (agent is not null)
+                            {
+                                d3.AgentName = agent.Name;
+                            }
+                        }
+                        d3.Id = item.Id;
+                        d3.PropertyName = item.PropertyName;
+                        d3.Purpose = item.PropertyType;
+                        d3.SqFt = item.SqFt;
+                        d3.Country = item.Country;
+                        d3.City = item.City;
+                        d3.Price = item.Price;
+                        d3.Address = item.Address;
+
+                        d3.Pic1 = item.Pic1;
+                        d3.Pic2 = item.Pic2;
+                        d3.Pic3 = item.Pic3;
+                        d3.Description = item.Description;
+                        d3.TotalBedroom = item.TotalBedroom;
+                        d3.TotalBath = item.TotalBath;
+                        d3.Purpose = item.Purpose;
+                        d3.OwnerName = item.OwnerName;
+                        d3.OwnerPhoneNumber = item.OwnerPhoneNumber;
+                        d3.OwnerAddress = item.OwnerAddress;
+                        d3.OwnerPhoneNumber = item.OwnerPhoneNumber;
+                        d3.AgentId = d3.AgentId;
+                        d1.property.Add(d3);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View(d1);
         }
         public IActionResult VillaSaleRent()
         {
-            return View();
+            MainModel d1 = new MainModel();
+            ViewBag.ApiBaseUrl = appSettings.GetConfiguration().maxOwnlink;
+            try
+            {
+                var d2 = unitOfWork.properties.getList(p => p.IsActive == true && p.ResidentType == "Villa");
+                if (d2 is not null)
+                {
+                    foreach (var item in d2)
+                    {
+
+                        PropertyModel d3 = new PropertyModel();
+                        if (item.AgentId > 0)
+                        {
+                            var agent = unitOfWork.agents.FindFirstOrDefault(a => a.IsActive == true && a.Id == item.AgentId);
+                            if (agent is not null)
+                            {
+                                d3.AgentName = agent.Name;
+                            }
+                        }
+                        d3.Id = item.Id;
+                        d3.PropertyName = item.PropertyName;
+                        d3.Purpose = item.PropertyType;
+                        d3.SqFt = item.SqFt;
+                        d3.Country = item.Country;
+                        d3.City = item.City;
+                        d3.Price = item.Price;
+                        d3.Address = item.Address;
+
+                        d3.Pic1 = item.Pic1;
+                        d3.Pic2 = item.Pic2;
+                        d3.Pic3 = item.Pic3;
+                        d3.Description = item.Description;
+                        d3.TotalBedroom = item.TotalBedroom;
+                        d3.TotalBath = item.TotalBath;
+                        d3.Purpose = item.Purpose;
+                        d3.OwnerName = item.OwnerName;
+                        d3.OwnerPhoneNumber = item.OwnerPhoneNumber;
+                        d3.OwnerAddress = item.OwnerAddress;
+                        d3.OwnerPhoneNumber = item.OwnerPhoneNumber;
+                        d3.AgentId = d3.AgentId;
+                        d1.property.Add(d3);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View(d1);
         }
         public IActionResult PropertyM()
         {

@@ -26,3 +26,4 @@ D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\refint\MaxDataAccess.d
 D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.pdb
 D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.genruntimeconfig.cache
 D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\ref\MaxDataAccess.dll
+D:\GoFinance\MaxRealEstate\MaxDataAccess\obj\Debug\net6.0\MaxDataAccess.sourcelink.json

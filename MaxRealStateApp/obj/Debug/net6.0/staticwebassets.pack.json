@@ -533,6 +533,10 @@
       "PackagePath": "staticwebassets\\admintheam\\images\\favicon.png"
     },
     {
+      "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\admintheam\\images\\hLogo.jpg",
+      "PackagePath": "staticwebassets\\admintheam\\images\\hLogo.jpg"
+    },
+    {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\admintheam\\images\\like.png",
       "PackagePath": "staticwebassets\\admintheam\\images\\like.png"
     },
@@ -703,6 +707,10 @@
     {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\admintheam\\images\\tab\\4.jpg",
       "PackagePath": "staticwebassets\\admintheam\\images\\tab\\4.jpg"
+    },
+    {
+      "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\admintheam\\images\\textlogo.png",
+      "PackagePath": "staticwebassets\\admintheam\\images\\textlogo.png"
     },
     {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\admintheam\\images\\users\\1.jpg",
@@ -1879,6 +1887,10 @@
     {
       "Id": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\wwwroot\\theam\\scss\\style.scss",
       "PackagePath": "staticwebassets\\theam\\scss\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MaxRealStateApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MaxRealStateApp.Microsoft.AspNetCore.StaticWebAssets.props",

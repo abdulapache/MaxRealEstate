@@ -1,7 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Commercial";
     Layout = "~/Views/ClientSide/_ClientLayout.cshtml";
+    var url = ViewBag.ApiBaseUrl;
 }
+
+@using MaxModels
+@model MainModel
+@using Newtonsoft.Json;
 
   <div class="hero page-inner overlay" style="background-image: url('images/hero_bg_1.jpg')">
         <div class="container">
@@ -110,91 +115,37 @@
 <div class="section" id="gridProfile" style="display: none;">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="property-item">
-                    <a href="property-single.html" class="img">
-                        <img src="https://www.barnes-dubai.com/photos/414/min/a08Pg00000HK7m5IAD_R6II8427.jpg" alt="Image" class="img-fluid" />
-                    </a>
-
-                    <div class="property-content">
-                        <div class="price mb-2"><span>AED 1,291,000</span></div>
-                        <div>
-                            <span class="d-block mb-2 text-black-50">5232 Duabi Fake, Ave. 21BC</span>
-                            <span class="city d-block mb-3">Duabi, UAE</span>
-
-                            <div class="specs d-flex mb-4">
-                                <span class="d-block d-flex align-items-center me-3">
-                                    <span class="icon-bed me-2"></span>
-                                    <span class="caption">2 beds</span>
-                                </span>
-                                <span class="d-block d-flex align-items-center">
-                                    <span class="icon-bath me-2"></span>
-                                    <span class="caption">2 baths</span>
-                                </span>
+            @foreach (var item in Model.property)
+            {
+                <div class="col-md-3">
+                    <div class="property-item"
+                         data-purpose="@item.Purpose"
+                         data-commercial-type="@item.CommercialType"
+                         data-city="@item.City">
+                        <a href="property-single.html" class="img">
+                            <img src="@url/UploadedFiles/@item.Pic1" alt="Image" class="img-fluid" />
+                        </a>
+                        <div class="property-content">
+                            <div class="price mb-2"><span>@item.Price</span></div>
+                            <div>
+                                <span class="d-block mb-2 text-black-50">@item.PropertyName</span>
+                                <span class="city d-block mb-3">@item.City, @item.Country</span>
+                                <div class="specs d-flex mb-4">
+                                    <span class="d-block d-flex align-items-center me-3">
+                                        <span class="icon-bed me-2"></span>
+                                        <span class="caption">@item.TotalBedroom</span>
+                                    </span>
+                                    <span class="d-block d-flex align-items-center">
+                                        <span class="icon-bath me-2"></span>
+                                        <span class="caption">@item.TotalBath</span>
+                                    </span>
+                                </div>
+                                <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
                             </div>
-
-                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="property-item">
-                    <a href="property-single.html" class="img">
-                        <img src="https://www.trulia.com/pictures/thumbs_5/zillowstatic/fp/9359433dcba48c48b3d8ea72f021c7c8-full.webp" alt="Image" class="img-fluid" />
-                    </a>
-
-                    <div class="property-content">
-                        <div class="price mb-2"><span>AED 1,291,000</span></div>
-                        <div>
-                            <span class="d-block mb-2 text-black-50">5232 Duabi Fake, Ave. 21BC</span>
-                            <span class="city d-block mb-3">Duabi, UAE</span>
-
-                            <div class="specs d-flex mb-4">
-                                <span class="d-block d-flex align-items-center me-3">
-                                    <span class="icon-bed me-2"></span>
-                                    <span class="caption">2 beds</span>
-                                </span>
-                                <span class="d-block d-flex align-items-center">
-                                    <span class="icon-bath me-2"></span>
-                                    <span class="caption">2 baths</span>
-                                </span>
-                            </div>
-
-                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="property-item">
-                    <a href="property-single.html" class="img">
-                        <img src="https://media.onthemarket.com/properties/13718586/1458267493/image-0-1024x1024.webp" alt="Image" class="img-fluid" />
-                    </a>
-
-                    <div class="property-content">
-                        <div class="price mb-2"><span>AED 1,291,000</span></div>
-                        <div>
-                            <span class="d-block mb-2 text-black-50">5232 Dubai Fake, Ave. 21BC</span>
-                            <span class="city d-block mb-3">Dubai, UAE</span>
-
-                            <div class="specs d-flex mb-4">
-                                <span class="d-block d-flex align-items-center me-3">
-                                    <span class="icon-bed me-2"></span>
-                                    <span class="caption">2 beds</span>
-                                </span>
-                                <span class="d-block d-flex align-items-center">
-                                    <span class="icon-bath me-2"></span>
-                                    <span class="caption">2 baths</span>
-                                </span>
-                            </div>
-
-                            <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            }
         </div>
     </div>
 </div>
@@ -259,3 +210,52 @@
         </div>
     </div>
 </div>
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Default view set to Grid on page load
+        gridProfile();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get filter dropdowns
+        const purposeDropdown = document.getElementById("purpose");
+        const commercialTypeDropdown = document.getElementById("commercial-type");
+        const cityDropdown = document.getElementById("city");
+
+        // Get all property items
+        const propertyItems = document.querySelectorAll(".property-item");
+
+        // Add event listeners for filter dropdowns
+        purposeDropdown.addEventListener("change", filterProperties);
+        commercialTypeDropdown.addEventListener("change", filterProperties);
+        cityDropdown.addEventListener("change", filterProperties);
+
+        function filterProperties() {
+            // Get selected filter values
+            const purpose = purposeDropdown.value.toLowerCase();
+            const commercialType = commercialTypeDropdown.value.toLowerCase();
+            const city = cityDropdown.value.toLowerCase();
+
+            // Iterate over all property items
+            propertyItems.forEach(item => {
+                const itemPurpose = item.dataset.purpose.toLowerCase();
+                const itemCommercialType = item.dataset.commercialType.toLowerCase();
+                const itemCity = item.dataset.city.toLowerCase();
+
+                const matchesPurpose = purpose === "purpose" || itemPurpose === purpose;
+                const matchesCommercialType = commercialType === "0" || itemCommercialType === commercialType;
+                const matchesCity = city === "0" || itemCity === city;
+
+                if (matchesPurpose && matchesCommercialType && matchesCity) {
+                    item.closest(".col-md-3").style.display = "block";
+                } else {
+                    item.closest(".col-md-3").style.display = "none";
+                }
+            });
+        }
+
+        // Initialize filtering on page load
+        filterProperties();
+    });
+</script>

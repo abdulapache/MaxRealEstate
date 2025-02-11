@@ -71,7 +71,3 @@ function cardProfile() {
     document.getElementById("gridbtn").querySelector('.toggle-btn').classList.remove("active");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Default view set to Grid on page load
-    gridProfile();
-});

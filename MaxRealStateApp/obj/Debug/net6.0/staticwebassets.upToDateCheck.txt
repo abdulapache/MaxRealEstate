@@ -131,7 +131,6 @@ wwwroot\admintheam\images\tab\1.jpg
 wwwroot\admintheam\images\tab\2.jpg
 wwwroot\admintheam\images\tab\3.jpg
 wwwroot\admintheam\images\tab\4.jpg
-wwwroot\admintheam\images\textlogo.jpg
 wwwroot\admintheam\images\textlogo.png
 wwwroot\admintheam\images\users\1.jpg
 wwwroot\admintheam\images\users\1.png
@@ -451,7 +450,6 @@ wwwroot\UploadedFiles\840c0303-0b0b-4016-abf6-06ab431c1d9eloan.jpg
 wwwroot\UploadedFiles\85025f67-f7c4-466b-840c-a82a8d30f423finance.jpg
 wwwroot\UploadedFiles\8b3ed6dc-f759-4959-a9a8-9fc232615e63Screenshot 2024-12-02 091352.png
 wwwroot\UploadedFiles\904731a7-8ede-44fe-bd11-ea013118a5dfcashB.webp
-wwwroot\UploadedFiles\924489bc-876d-420b-9a60-adec097e320aAR Profile.jpg
 wwwroot\UploadedFiles\9469dc45-3c77-41a7-bc18-55e4b841f603card.jpg
 wwwroot\UploadedFiles\95e2760c-f183-46ed-a8c4-5001618ae456finance.jpg
 wwwroot\UploadedFiles\9e38a2fc-d825-4ec3-8a58-3491f1f36aecmedical.webp

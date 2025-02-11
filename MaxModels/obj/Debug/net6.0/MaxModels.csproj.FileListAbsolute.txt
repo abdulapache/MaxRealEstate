@@ -16,3 +16,4 @@ D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.dll
 D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\refint\MaxModels.dll
 D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.pdb
 D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\ref\MaxModels.dll
+D:\GoFinance\MaxRealEstate\MaxModels\obj\Debug\net6.0\MaxModels.sourcelink.json
