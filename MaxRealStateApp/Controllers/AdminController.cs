@@ -2,7 +2,9 @@
 using MaxDataAccess.Entites;
 using MaxModels;
 using MaxRealStateApp.Configuration;
+using MaxRealStateApp.Utilites;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace MaxRealStateApp.Controllers
@@ -11,17 +13,107 @@ namespace MaxRealStateApp.Controllers
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IAppSettings appSettings;
+        private readonly PasswordService hashPassword;
 
-        public AdminController(IUnitOfWork unitOfWork, IAppSettings appSettings)
+        public AdminController(IUnitOfWork unitOfWork, IAppSettings appSettings, PasswordService hashPassword)
         {
             this.appSettings = appSettings;
             this.unitOfWork = unitOfWork;
+            this.hashPassword = hashPassword;
         }
         public IActionResult Index()
         {
             ViewBag.ApiBaseUrl = appSettings.GetConfiguration().maxOwnlink;
             return View();
         }
+        public IActionResult Login(LoginModel model)
+        {
+            try
+            {
+                if (model == null || string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
+                {
+                    TempData["AlertMessage"] = "❌ Email and Password are required!";
+                    TempData["AlertType"] = "error"; // SweetAlert type
+                    return RedirectToAction("Index");
+                }
+
+                var adminUser = unitOfWork.adminUser.FindFirstOrDefault(u => u.Email == model.Email);
+                if (adminUser == null)
+                {
+                    TempData["AlertMessage"] = "❌ Invalid email or password!";
+                    TempData["AlertType"] = "error";
+                    return RedirectToAction("Index");
+                }
+
+                var passwordVerificationResult = hashPassword.VerifyPassword(adminUser.PasswordHash, model.Password);
+                if (!passwordVerificationResult)
+                {
+                    TempData["AlertMessage"] = "❌ Invalid email or password!";
+                    TempData["AlertType"] = "error";
+                    return RedirectToAction("Index");
+                }
+
+                // ✅ Login successful
+               
+                return RedirectToAction("Dashboard");
+            }
+            catch (Exception ex)
+            {
+                TempData["AlertMessage"] = "❌ An error occurred!";
+                TempData["AlertType"] = "error";
+                return RedirectToAction("Index");
+            }
+        }
+
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
+        public IActionResult Register(SignUpModel model)
+        {
+            if (model == null)
+            {
+                TempData["AlertMessage"] = "❌ Invalid request. Please provide valid data.";
+                TempData["AlertType"] = "error";
+                return RedirectToAction("SignUp");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
+            {
+                TempData["AlertMessage"] = "❌ Email and Password are required!";
+                TempData["AlertType"] = "error";
+                return RedirectToAction("SignUp");
+            }
+
+            var existingUser = unitOfWork.adminUser.FindFirstOrDefault(u => u.Email == model.Email);
+            if (existingUser != null)
+            {
+                TempData["AlertMessage"] = "❌ Email already exists!";
+                TempData["AlertType"] = "error";
+                return RedirectToAction("SignUp");
+            }
+
+            string hashedPassword = hashPassword.HashPassword(model.Password);
+            var newAdmin = new AdminUser
+            {
+                AgentId = model.AgentId,
+                Email = model.Email,
+                PasswordHash = hashedPassword,
+                Role = model.Role ?? "Admin",
+                CreatedAt = DateTime.UtcNow
+            };
+
+            unitOfWork.adminUser.Add(newAdmin);
+            unitOfWork.Save();
+
+
+            return RedirectToAction("Login");
+        }
+
+
+
+
         public IActionResult Dashboard()
         {
             return View();

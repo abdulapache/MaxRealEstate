@@ -15,6 +15,7 @@ namespace MaxDataAccess
 		IRepository<Blog> blogs { get; }
 		IRepository<ContactU> contactUs { get; }
 		IRepository<UserQuery> userQuery { get; }
+		IRepository<AdminUser> adminUser { get; }
 		void Save();
 	}
 }

@@ -16,6 +16,7 @@ namespace MaxDataAccess.Entites
         {
         }
 
+        public virtual DbSet<AdminUser> AdminUsers { get; set; } = null!;
         public virtual DbSet<Agent> Agents { get; set; } = null!;
         public virtual DbSet<Blog> Blogs { get; set; } = null!;
         public virtual DbSet<ContactU> ContactUs { get; set; } = null!;
@@ -33,6 +34,29 @@ namespace MaxDataAccess.Entites
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<AdminUser>(entity =>
+            {
+                entity.HasIndex(e => e.AgentId, "UQ__AdminUse__9AC3BFF030F2BDD8")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.Email, "UQ__AdminUse__A9D1053428ABA54B")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Email).HasMaxLength(255);
+
+                entity.Property(e => e.PasswordHash).HasMaxLength(500);
+
+                entity.Property(e => e.Role)
+                    .HasMaxLength(50)
+                    .HasDefaultValueSql("('Admin')");
+            });
+
             modelBuilder.Entity<Agent>(entity =>
             {
                 entity.Property(e => e.Address).HasMaxLength(500);

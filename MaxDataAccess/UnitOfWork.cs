@@ -20,6 +20,7 @@ namespace MaxDataAccess
 			blogs = new Repository<Blog>(db);
 			contactUs = new Repository<ContactU>(db);
             userQuery = new Repository<UserQuery>(db);
+            adminUser = new Repository<AdminUser>(db);
 			
 		}
 		public IRepository<Agent> agents { get; private set; }
@@ -27,6 +28,7 @@ namespace MaxDataAccess
 		public IRepository<Blog> blogs { get; private set; }
 		public IRepository<ContactU> contactUs { get; private set; }
 		public IRepository<UserQuery> userQuery { get; private set; }
+		public IRepository<AdminUser> adminUser { get; private set; }
 
 		public void Save()
 		{

@@ -13,6 +13,7 @@ builder.Services.AddDbContext<MaxRealStateContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MaxDb")));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<PasswordService>();
 builder.Services.AddTransient<IAppSettings, AppSettings>();
 builder.Services.AddTransient<IFileManager, FileManager>();
 
