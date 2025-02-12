@@ -32,30 +32,32 @@
                 <p class="p-3 box-shadow"
                     style="background-color: white; color:black; border: 1px solid rgb(184, 184, 184);">Commercial</p>
             </div>
-            <div class="col-md-6 mt-2">
-                <select id="purpose" class="form-select p-3">
-                    <option>Purpose</option>
-                    <option>Sale</option>
-                    <option>Rent</option>
-                </select>
-            </div>
-            <div class="col-md-3 mt-2">
-                <select id="commercial-type" class="form-select p-3">
-                    <option>Residential Type</option>
-                    <option>Office</option>
-                    <option>Shop</option>
-                    <option>Warehouse</option>
-                </select>
-            </div>
-            <div class="col-md-3 mt-2">
-                <select id="city" class="form-select p-3">
-                    <option>City</option>
-                    <option>New York</option>
-                    <option>Los Angeles</option>
-                    <option>Chicago</option>
-                </select>
-            </div>
-            <div class="col-md-3 mt-2">
+        <div class="col-md-6 mt-2">
+            <select id="purpose" class="form-select p-3">
+                <option>Purpose</option>
+                <option value="Buy">Buy</option>
+                <option value="Rent">Rent</option>
+            </select>
+        </div>
+           
+        <div class="col-md-3 mt-2">
+            <select id="commercial-type" class="form-select p-3">
+                <option value="0" selected>Commercial Type</option>
+                <option value="Villa">Villa</option>
+                <option value="Appartment">Appartment</option>
+                <option value="Shop">Shop</option>
+                <option value="Showroom">Showroom</option>
+                <option value="Warehouse">Warehouse</option>
+            </select>
+        </div>
+        <div class="col-md-3 mt-2">
+            <select id="city" class="form-select p-3">
+                <option value="0" selected>City</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+            </select>
+        </div>
+           @*  <div class="col-md-3 mt-2">
                 <select id="city" class="form-select p-3">
                     <option>Area</option>
                     <option>New York</option>
@@ -71,7 +73,7 @@
                     <option>Chicago</option>
                   </select>
 
-            </div>
+            </div> *@
         </div>
     </div>
 
@@ -79,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7" data-aos="fade-up">
-                    <h3>Residential</h3>
+                <h3>Commercial</h3>
                 </div>
                 <div class="col-md-1 mt-3">
                     <h6>Sort by:</h6>
@@ -130,6 +132,8 @@
                             <div>
                                 <span class="d-block mb-2 text-black-50">@item.PropertyName</span>
                                 <span class="city d-block mb-3">@item.City, @item.Country</span>
+                                <span class="caption">@item.Purpose</span>
+                                <span class="caption">@item.CommercialType</span>
                                 <div class="specs d-flex mb-4">
                                     <span class="d-block d-flex align-items-center me-3">
                                         <span class="icon-bed me-2"></span>
@@ -139,6 +143,7 @@
                                         <span class="icon-bath me-2"></span>
                                         <span class="caption">@item.TotalBath</span>
                                     </span>
+                                   
                                 </div>
                                 <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
                             </div>

@@ -91,7 +91,9 @@ namespace MaxRealStateApp.Controllers
                         d2.CommercialType = item.CommercialType;
                         d2.ResidentType = item.ResidentType;
                         d2.Purpose = item.Purpose;
-                        //d2.SqFt = item.SqFt;
+                        d2.SqFt = item.SqFt;
+                        d2.Address = item.Address;
+                        
                         d2.TotalBedroom = item.TotalBedroom;
                         d2.TotalBath = item.TotalBath;
                         d2.Pic1 = item.Pic1;
@@ -237,6 +239,7 @@ namespace MaxRealStateApp.Controllers
                         d2.ResidentType = model.ResidentType;
                         d2.Purpose = model.Purpose;
                         d2.SqFt = model.SqFt;
+                        d2.Address = model.Address;
                         d2.Description = model.Description;
                         d2.TotalBedroom = model.TotalBedroom;
                         d2.TotalBath = model.TotalBath;
@@ -277,6 +280,7 @@ namespace MaxRealStateApp.Controllers
                     d1.ResidentType = model.ResidentType;
                     d1.Purpose = model.Purpose;
                     d1.SqFt = model.SqFt;
+                    d1.Address = model.Address;
                     d1.TotalBedroom = model.TotalBedroom;
                     d1.TotalBath = model.TotalBath;
                     d1.Pic1 = model.Pic1;

@@ -40,16 +40,16 @@ function toggleDropdown() {
     }
 }
 
-window.addEventListener('scroll', function () {
-    const siteNav = document.getElementById('siteNav');
-    const headerContainer = document.getElementById('headerContainer');
+//window.addEventListener('scroll', function () {
+//    const siteNav = document.getElementById('siteNav');
+//    const headerContainer = document.getElementById('headerContainer');
 
-    if (window.scrollY > 50) {
-        siteNav.classList.add('sticky');
-    } else {
-        siteNav.classList.remove('sticky');
-    }
-});
+//    if (window.scrollY > 50) {
+//        siteNav.classList.add('sticky');
+//    } else {
+//        siteNav.classList.remove('sticky');
+//    }
+//});
 
 function gridProfile() {
     // Show grid view and hide card view

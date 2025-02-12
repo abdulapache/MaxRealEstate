@@ -53,7 +53,8 @@ namespace MaxRealStateApp.Controllers
                         d3.City = item.City;
                         d3.Price = item.Price;
                         d3.Address = item.Address;
-
+                        d3.ResidentType = item.ResidentType;
+                      
                         d3.Pic1 = item.Pic1;
                         d3.Pic2 = item.Pic2;
                         d3.Pic3 = item.Pic3;
@@ -107,7 +108,7 @@ namespace MaxRealStateApp.Controllers
                         d3.City = item.City;
                         d3.Price = item.Price;
                         d3.Address = item.Address;
-
+                        d3.CommercialType = item.CommercialType;
                         d3.Pic1 = item.Pic1;
                         d3.Pic2 = item.Pic2;
                         d3.Pic3 = item.Pic3;

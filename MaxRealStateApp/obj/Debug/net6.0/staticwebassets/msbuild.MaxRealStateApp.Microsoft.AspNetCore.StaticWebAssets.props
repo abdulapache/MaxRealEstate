@@ -5088,8 +5088,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>djy04e5s88</Fingerprint>
-      <Integrity>J4WhQV5qOnmlH/RGmSKu2j0+Fcuo1mFSuhDO30MkilY=</Integrity>
+      <Fingerprint>1k0i0o2r4b</Fingerprint>
+      <Integrity>URNbr6q+359y+DbhYonqB5IEnXq7dRPyh3smrL5hILI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JavaScript\ClientSide.js'))</OriginalItemSpec>
@@ -7812,6 +7812,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\094a22ce-c480-4e9a-bda9-397322862d55loan.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\0fca4d4a-9e26-43d8-945f-d4b311bec8b4_bfc65108-9bef-4784-ba64-39df9093a989.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/0fca4d4a-9e26-43d8-945f-d4b311bec8b4_bfc65108-9bef-4784-ba64-39df9093a989.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>55m1akrqvx</Fingerprint>
+      <Integrity>WXAy/QAVpdY6TsjvWUrrVwSDIQfXpaUfGgXvIVRvu8I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\0fca4d4a-9e26-43d8-945f-d4b311bec8b4_bfc65108-9bef-4784-ba64-39df9093a989.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\11deb212-f5fa-42a8-9685-a679e4d15519loan.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MaxRealStateApp</SourceId>
@@ -7866,6 +7884,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\17ad678e-53b7-4551-ae09-dc7f16cd6fb5dCover.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1aba808b-d06e-44b0-89a4-670940f9ce5d2.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/1aba808b-d06e-44b0-89a4-670940f9ce5d2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ytew946fwt</Fingerprint>
+      <Integrity>6pMTtA8qZNL6tUDubcaYhNPAB/dvQjoO+Ew78W86wQ8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1aba808b-d06e-44b0-89a4-670940f9ce5d2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1ca8e8df-0a56-454d-b50e-ba948a8ab943DreamHomes.png'))">
       <SourceType>Package</SourceType>
       <SourceId>MaxRealStateApp</SourceId>
@@ -7901,6 +7937,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\1d1e7216-a13a-4b3b-837a-194475c1ad06loan.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\26ef0389-8fb6-45c3-bbfa-87d85a025dd2AR Profile.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/26ef0389-8fb6-45c3-bbfa-87d85a025dd2AR Profile.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yjxciutli3</Fingerprint>
+      <Integrity>IjFs0rEA3sHAnZthckb1DezOk3dVF0Pt57VRmvljYqQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\26ef0389-8fb6-45c3-bbfa-87d85a025dd2AR Profile.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\2af5c306-a370-4958-b9ce-6b564ad9253113.jpg'))">
       <SourceType>Package</SourceType>
@@ -7956,6 +8010,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\466fcef4-b8f1-488e-a415-8e2aa97e1f1e13.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\47c3c7e4-94a3-4c56-a16a-4c62910d5a0fAR Profile.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/47c3c7e4-94a3-4c56-a16a-4c62910d5a0fAR Profile.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yjxciutli3</Fingerprint>
+      <Integrity>IjFs0rEA3sHAnZthckb1DezOk3dVF0Pt57VRmvljYqQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\47c3c7e4-94a3-4c56-a16a-4c62910d5a0fAR Profile.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\484f4640-05ef-4dbb-8c97-55684c0a890aloan.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MaxRealStateApp</SourceId>
@@ -7973,6 +8045,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\484f4640-05ef-4dbb-8c97-55684c0a890aloan.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\4b18bce1-2ea7-407a-a4c8-c43bb26ed5f7_3e28ce96-c012-491a-b426-ba1bc7d928a3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/4b18bce1-2ea7-407a-a4c8-c43bb26ed5f7_3e28ce96-c012-491a-b426-ba1bc7d928a3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wi8c8sq2eq</Fingerprint>
+      <Integrity>KM6ZXhbH8vVJhjPrFW6IKJDkOOJv4zHTtmzaTGxDkmU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\4b18bce1-2ea7-407a-a4c8-c43bb26ed5f7_3e28ce96-c012-491a-b426-ba1bc7d928a3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\4c568f4c-3760-41b0-b864-8354c05282292.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/4c568f4c-3760-41b0-b864-8354c05282292.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ytew946fwt</Fingerprint>
+      <Integrity>6pMTtA8qZNL6tUDubcaYhNPAB/dvQjoO+Ew78W86wQ8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\4c568f4c-3760-41b0-b864-8354c05282292.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\4ec06275-0c67-4bbd-9796-79b2d8c2b7c712.jpg'))">
       <SourceType>Package</SourceType>
@@ -8190,6 +8298,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\9e38a2fc-d825-4ec3-8a58-3491f1f36aecmedical.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a0af6094-ce0d-43c9-ae88-bbb8f6a74432_3e28ce96-c012-491a-b426-ba1bc7d928a3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/a0af6094-ce0d-43c9-ae88-bbb8f6a74432_3e28ce96-c012-491a-b426-ba1bc7d928a3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wi8c8sq2eq</Fingerprint>
+      <Integrity>KM6ZXhbH8vVJhjPrFW6IKJDkOOJv4zHTtmzaTGxDkmU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a0af6094-ce0d-43c9-ae88-bbb8f6a74432_3e28ce96-c012-491a-b426-ba1bc7d928a3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\a24314dc-3354-4c1d-8d7c-f97feee0398412.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MaxRealStateApp</SourceId>
@@ -8261,6 +8387,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\aef4b853-1bf4-4bda-bc18-46f533a23af313.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\b7448961-ba66-41ab-8912-154d68cd4157_bfc65108-9bef-4784-ba64-39df9093a989.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MaxRealStateApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MaxRealStateApp</BasePath>
+      <RelativePath>UploadedFiles/b7448961-ba66-41ab-8912-154d68cd4157_bfc65108-9bef-4784-ba64-39df9093a989.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>55m1akrqvx</Fingerprint>
+      <Integrity>WXAy/QAVpdY6TsjvWUrrVwSDIQfXpaUfGgXvIVRvu8I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\b7448961-ba66-41ab-8912-154d68cd4157_bfc65108-9bef-4784-ba64-39df9093a989.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UploadedFiles\bc17e042-a155-4d9b-bc6c-719f680c753efirstm.png'))">
       <SourceType>Package</SourceType>
