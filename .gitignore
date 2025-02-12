@@ -1,22 +1,56 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Ignore Visual Studio & .NET build files
+bin/
+obj/
+*.suo
+*.user
+*.rsuser
+*.vsp
+*.vspscc
+.vscode/
+.vs/
+*.pdb
+*.ilk
+*.cache
+*.log
 
-/MaxRealStateApp/obj/Debug/net6.0/ref/MaxRealStateApp.dll
-/MaxRealStateApp/.vs/MaxRealStateApp/DesignTimeBuild/.dtbcache.v2
-*.vsidx
-/MaxRealStateApp/.vs/MaxRealStateApp/FileContentIndex/5893f61c-64bd-4c08-9c4f-86e4bbce108d.vsidx
-/MaxRealStateApp/.vs/MaxRealStateApp/FileContentIndex/69e10c1c-7290-4098-96c0-118ac7a947a9.vsidx
-/MaxRealStateApp/.vs/MaxRealStateApp/FileContentIndex/acd1cc2b-3e71-4b58-8ff0-285721e0b7d4.vsidx
-/MaxRealStateApp/.vs/MaxRealStateApp/FileContentIndex/f7ff3930-9d29-41b8-9446-299f71bc1e22.vsidx
-/MaxRealStateApp/.vs/MaxRealStateApp/v17/.futdcache.v2
-/MaxRealStateApp/.vs/MaxRealStateApp/v17/.suo
-/MaxRealStateApp/.vs/MaxRealStateApp/v17/fileList.bin
-/MaxRealStateApp/obj/Debug/net6.0/refint/MaxRealStateApp.dll
-/MaxRealStateApp/obj/Debug/net6.0/MaxRealStateApp.dll
-/MaxRealStateApp/obj/Debug/net6.0/MaxRealStateApp.csproj.CoreCompileInputs.cache
-/MaxRealStateApp/obj/Debug/net6.0/MaxRealStateApp.pdb
-/MaxRealStateApp/bin/Debug/net6.0/MaxRealStateApp.dll
-/MaxRealStateApp/bin/Debug/net6.0/MaxRealStateApp.pdb
-/MaxRealStateApp/.vs/ProjectEvaluation/maxrealstateapp.metadata.v7.bin
-/MaxRealStateApp/.vs/ProjectEvaluation/maxrealstateapp.projects.v7.bin
+# Ignore environment settings
+.env
+*.config.user
+
+# Ignore application secrets
+secrets.json
+appsettings.json
+appsettings.Development.json
+scaffolding.txt
+
+# Ignore compiled DLLs & packages
+*.dll
+*.exe
+*.o
+*.a
+*.lib
+*.so
+*.dylib
+*.nupkg
+*.snupkg
+*.psd1
+*.psm1
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+project.lock.json
+*.nuget.props
+*.nuget.targets
+
+# Ignore Rider & JetBrains files
+.idea/
+*.sln.iml
+
+# Ignore Entity Framework migrations (if using local migrations)
+Migrations/
+
+# Ignore log files
+*.log
+logs/
+log.txt
