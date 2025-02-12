@@ -1,10 +1,11 @@
-﻿//using WasiteeModels.DataModels;
+﻿using MaxModels;
 
-//namespace WasiteeApp.Utilites
-//{
-//    public interface ICookieHelper
-//    {
-//         BusinessUserModel ReadUserModelFromCookie();
-//        void ClearCookies();
-//    }
-//}
+
+namespace MaxRealStateApp.Utilites
+{
+    public interface ICookieHelper
+    {
+        SignUpModel ReadUserModelFromCookie();
+        void ClearCookies();
+    }
+}

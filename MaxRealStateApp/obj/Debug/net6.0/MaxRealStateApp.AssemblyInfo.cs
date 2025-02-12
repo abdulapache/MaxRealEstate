@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaxRealStateApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eac42b457cc58e2d29cb735b161d8d8e825b28d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e19b8a9a649bfdbf9b18b9a45d0169885c264837")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaxRealStateApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaxRealStateApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

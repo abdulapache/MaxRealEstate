@@ -5,7 +5,10 @@ using MaxRealStateApp.Configuration;
 using MaxRealStateApp.Utilites;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using System.Linq;
+
 
 namespace MaxRealStateApp.Controllers
 {
@@ -14,12 +17,14 @@ namespace MaxRealStateApp.Controllers
         private readonly IUnitOfWork unitOfWork;
         private readonly IAppSettings appSettings;
         private readonly PasswordService hashPassword;
+        private readonly ICookieHelper cookieHelper;
 
-        public AdminController(IUnitOfWork unitOfWork, IAppSettings appSettings, PasswordService hashPassword)
+        public AdminController(IUnitOfWork unitOfWork, IAppSettings appSettings, PasswordService hashPassword, ICookieHelper cookieHelper)
         {
             this.appSettings = appSettings;
             this.unitOfWork = unitOfWork;
             this.hashPassword = hashPassword;
+            this.cookieHelper = cookieHelper;   
         }
         public IActionResult Index()
         {
@@ -30,6 +35,9 @@ namespace MaxRealStateApp.Controllers
         {
             try
             {
+                SignUpModel user = new SignUpModel();
+                cookieHelper.ClearCookies();
+
                 if (model == null || string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
                 {
                     TempData["AlertMessage"] = "❌ Email and Password are required!";
@@ -54,7 +62,19 @@ namespace MaxRealStateApp.Controllers
                 }
 
                 // ✅ Login successful
-               
+                user.AgentId = adminUser.AgentId;
+                user.Email = adminUser.Email;
+                user.Id = adminUser.Id;
+
+                var cookieOptions = new CookieOptions
+                {
+                    Expires = DateTime.Now.AddDays(7),
+                    SameSite = SameSiteMode.Strict
+
+                };
+                var json = JsonConvert.SerializeObject(user);
+                Response.Cookies.Append("UserCookies", json, cookieOptions);
+
                 return RedirectToAction("Dashboard");
             }
             catch (Exception ex)
@@ -111,13 +131,31 @@ namespace MaxRealStateApp.Controllers
             return RedirectToAction("Login");
         }
 
+        public IActionResult Logout()
+        {
+            cookieHelper.ClearCookies();
 
+            TempData["AlertMessage"] = "✅ Logged out successfully!";
+            TempData["AlertType"] = "success";
 
+            return RedirectToAction("Index");
+        }
 
         public IActionResult Dashboard()
         {
+            var userCookies = cookieHelper.ReadUserModelFromCookie().Email;
+
+            if (string.IsNullOrEmpty(userCookies))
+            {
+                // ❌ No user session → Redirect to Login
+                TempData["AlertMessage"] = "❌ Please log in first!";
+                TempData["AlertType"] = "warning";
+                return RedirectToAction("Index");
+            }
+
             return View();
         }
+
         public IActionResult Agents()
         {
             List<AgentModel> d1 = new List<AgentModel>();

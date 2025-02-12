@@ -3,7 +3,16 @@
   "WorkspaceRootPath": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EAF41472-D060-4011-BE1E-D577B04F7CEB}|..\\MaxModels\\MaxModels.csproj|d:\\gofinance\\maxrealestate\\maxmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\utilites\\cookieshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:utilites\\cookieshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\utilites\\icookiehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:utilites\\icookiehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -14,12 +23,15 @@
       "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:views\\admin\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF41472-D060-4011-BE1E-D577B04F7CEB}|..\\MaxModels\\MaxModels.csproj|d:\\gofinance\\maxrealestate\\maxmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD26B9EE-87F0-4ACD-8640-73EE6E1A40F2}|MaxRealStateApp.csproj|d:\\gofinance\\maxrealestate\\maxrealstateapp\\utilites\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,7 +51,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,12 +119,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:47:37.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CookiesHelper.cs",
+              "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Utilites\\CookiesHelper.cs",
+              "RelativeDocumentMoniker": "Utilites\\CookiesHelper.cs",
+              "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Utilites\\CookiesHelper.cs",
+              "RelativeToolTip": "Utilites\\CookiesHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:44:52.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICookieHelper.cs",
+              "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Utilites\\ICookieHelper.cs",
+              "RelativeDocumentMoniker": "Utilites\\ICookieHelper.cs",
+              "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Utilites\\ICookieHelper.cs",
+              "RelativeToolTip": "Utilites\\ICookieHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:44:51.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
-              "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\Dashboard.cshtml*",
-              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml*",
+              "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
               "ViewState": "AgIAABQEAAAAAAAAAAAgwDYEAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-12T07:26:24.616Z",
@@ -120,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "PasswordService.cs",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Utilites\\PasswordService.cs",
               "RelativeDocumentMoniker": "Utilites\\PasswordService.cs",
@@ -133,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxModels\\LoginModel.cs",
               "RelativeDocumentMoniker": "..\\MaxModels\\LoginModel.cs",
@@ -146,46 +197,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SignUp.cshtml",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\SignUp.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\SignUp.cshtml",
               "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\SignUp.cshtml",
               "RelativeToolTip": "Views\\Admin\\SignUp.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-12T07:06:34.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
               "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwCwAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-12T07:06:10.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "D:\\GoFinance\\MaxRealEstate\\MaxRealStateApp\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAgwHMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T06:39:43.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxDataAccess\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\MaxDataAccess\\UnitOfWork.cs",
@@ -198,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "D:\\GoFinance\\MaxRealEstate\\MaxDataAccess\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\MaxDataAccess\\IUnitOfWork.cs",

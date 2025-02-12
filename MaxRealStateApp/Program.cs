@@ -4,6 +4,7 @@ using MaxRealStateApp.Configuration;
 using Microsoft.EntityFrameworkCore;
 using MaxRealStateApp.Utilites;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +17,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<PasswordService>();
 builder.Services.AddTransient<IAppSettings, AppSettings>();
 builder.Services.AddTransient<IFileManager, FileManager>();
+builder.Services.AddTransient<ICookieHelper, CookiesHelper>();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
